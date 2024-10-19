@@ -179,8 +179,7 @@ const footer = () => {
           <p>Copyright &copy; 2024 FlickNest. Build with ❤️ by Sankalpa Dahal.</p>
         </div>
 
-        <br className='block sm:hidden' />
-        <br className='block sm:hidden' />
+        
       </footer>
 
 

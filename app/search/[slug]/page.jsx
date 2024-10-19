@@ -6,7 +6,7 @@ import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
 
 const movies = [
-    
+
     {
         title: 'Chak De! India',
         release_year: '2007',
@@ -137,6 +137,9 @@ const search = ({ params }) => {
                     </div>
                 </div>
             </section>
+
+            <br className='block lg:hidden' />
+            <br className='block lg:hidden' />
 
             <Footer />
         </>

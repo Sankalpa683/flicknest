@@ -38,7 +38,7 @@ const Navbar = ({ active }) => {
 
     return (
         <>
-            <header className="py-2 sticky top-0 z-50 bg-white text-black">
+            <header className="py-2 sticky top-0 z-50 bg-white ">
                 <nav className="flex justify-between items-center mx-4 md:mx-6">
                     {/* Logo */}
                     <div className="flex items-center gap-4 md:gap-4">

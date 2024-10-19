@@ -102,7 +102,7 @@ const movies = [
         description: 'Sports Drama',
         img: 'https://m.media-amazon.com/images/M/MV5BMTM2MjgyNDE5Nl5BMl5BanBnXkFtZTcwMzM1MDc4MQ@@._V1_.jpg',
     },
-    
+
 ];
 
 const siteName = 'FlickNest';
@@ -110,75 +110,75 @@ const siteURL = 'https://flicknest.com';
 const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
 export const metadata = {
-  title: `${siteName} | Watch Bollywood Movies Online For Free `,
-  description,
+    title: `${siteName} | Watch Bollywood Movies Online For Free `,
+    description,
 };
 
 const MoviesPage = () => {
 
-        <NextSeo
-          title={`${siteName} | Watch Bollywood Movies Online For Free `}
-          description={description}
-          canonical={siteURL}
-          openGraph={{
+    <NextSeo
+        title={`${siteName} | Watch Bollywood Movies Online For Free `}
+        description={description}
+        canonical={siteURL}
+        openGraph={{
             url: siteURL,
             title: `${siteName} | Watch Free Bollywood Movies Online`,
             description,
             images: [
-              {
-                url: `${siteURL}/images/og-image.jpg`,
-                width: 800,
-                height: 600,
-                alt: `${siteName} - Watch Bollywood Movies Online For Free `,
-              },
+                {
+                    url: `${siteURL}/images/og-image.jpg`,
+                    width: 800,
+                    height: 600,
+                    alt: `${siteName} - Watch Bollywood Movies Online For Free `,
+                },
             ],
             site_name: siteName,
-          }}
-          twitter={{
+        }}
+        twitter={{
             handle: '@flicknest',
             site: '@flicknest',
             cardType: 'summary_large_image',
-          }}
-          additionalMetaTags={[
+        }}
+        additionalMetaTags={[
             {
-              name: 'keywords',
-              content: 'watch Bollywood movies online for free,watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
+                name: 'keywords',
+                content: 'watch Bollywood movies online for free,watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
             },
             {
-              name: 'robots',
-              content: 'index, follow',
+                name: 'robots',
+                content: 'index, follow',
             },
-          ]}
-          // JSON-LD for Organization structured data
-          jsonLd={{
+        ]}
+        // JSON-LD for Organization structured data
+        jsonLd={{
             '@context': 'https://schema.org',
             '@type': 'Organization',
             url: siteURL,
             logo: `${siteURL}/images/logo.png`,
             name: siteName,
             sameAs: [
-              'https://www.facebook.com/flicknest',
-              'https://www.instagram.com/flicknest',
-              'https://www.twitter.com/flicknest',
+                'https://www.facebook.com/flicknest',
+                'https://www.instagram.com/flicknest',
+                'https://www.twitter.com/flicknest',
             ],
             contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+1-800-555-5555',
-              contactType: 'Customer Support',
+                '@type': 'ContactPoint',
+                telephone: '+1-800-555-5555',
+                contactType: 'Customer Support',
             },
-          }}
-        />
+        }}
+    />
     return (
         <>
-            
-            <Navbar active='movies'/>
+
+            <Navbar active='movies' />
             {/* Movies List */}
             <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
-                            <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                                Bollywood Movies
-                            </h2>
+                        <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
+                            Bollywood Movies
+                        </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                             {movies.map((movie, index) => (
                                 <a
@@ -216,6 +216,8 @@ const MoviesPage = () => {
                 </div>
             </section>
 
+            <br className='block lg:hidden' />
+            <br className='block lg:hidden' />
             <Footer />
         </>
     );
