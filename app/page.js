@@ -22,8 +22,8 @@ const page = () => {
         <Drama />
       </main>
       <Footer />
-      <br className='block lg:hidden'/>
-      <br className='block lg:hidden'/>
+      <br className='block sm:hidden'/>
+      <br className='block sm:hidden'/>
     </>
   )
 }
