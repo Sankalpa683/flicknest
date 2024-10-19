@@ -38,7 +38,7 @@ const Navbar = ({ active }) => {
 
     return (
         <>
-            <header className="py-2 sticky top-0 z-50 bg-white">
+            <header className="py-2 sticky top-0 z-50 bg-white text-black">
                 <nav className="flex justify-between items-center mx-4 md:mx-6">
                     {/* Logo */}
                     <div className="flex items-center gap-4 md:gap-4">
@@ -67,9 +67,9 @@ const Navbar = ({ active }) => {
                     </div>
 
                     {/* Mobile Menu Icon (Hamburger) */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center text-black gap-4">
                         <SearchOutlined
-                            className="cursor-pointer text-xl"
+                            className="cursor-pointer text-black text-xl"
                             onClick={() => setIsSearchVisible(true)} // Open the search modal
                         />
                         <Dropdown overlay={links} trigger={['click']}>
@@ -99,7 +99,7 @@ const Navbar = ({ active }) => {
             </Modal>
 
             {/* Mobile Navbar */}
-            <div className="lg:hidden fixed -bottom-1 py-1 left-0 right-0 bg-white shadow-lg border-t border-gray-300">
+            <div className="lg:hidden fixed -bottom-1 py-1 left-0 right-0 text-black bg-white shadow-lg border-t border-gray-300">
                 <nav className="flex justify-around py-2">
                     <Link href="/" className="flex flex-col items-center text-center">
                         <HomeOutlined className="text-xl" />

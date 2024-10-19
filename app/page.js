@@ -14,7 +14,7 @@ const page = () => {
     <>
       <Navbar active='home'/>
       <Hero />
-      <main className='mb-10'>
+      <main className='mb-10 bg-white'>
         <Cult_classic />
         <Recommendations />
         <Comedy />

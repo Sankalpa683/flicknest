@@ -95,7 +95,7 @@ const search = ({ params }) => {
         <>
             <Navbar active='movies' />
             {/* Movies List */}
-            <section className="py-6 sm:py-6 md:py-8 lg:py-12 ">
+            <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
                         <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">

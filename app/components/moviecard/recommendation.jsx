@@ -45,7 +45,7 @@ const movies = [
 const Recommendations = () => {
     return (
         <>
-            <section className="">
+            <section className="bg-white">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
                         <div className='flex flex-wrap justify-between'>
