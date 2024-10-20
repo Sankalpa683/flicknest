@@ -41,9 +41,9 @@ export default function MoviePage() {
               </p>
               <div className="flex space-x-2 py-3">
                 <Badge color="blue">Sci-Fi</Badge>
-                <span>•</span>
+                <span className="text-[#171717]">•</span>
                 <Badge color="green">Action</Badge>
-                <span>•</span>
+                <span className="text-[#171717]">•</span>
                 <Badge color="volcano">Adventure</Badge>
               </div>
             </div>
