@@ -76,7 +76,7 @@ const cult_classic = () => {
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Cult Classic
                             </h2>
-                            <Link href='/category/Action' onClick={handleLinkClick}>
+                            <Link href='/category/cult_classic' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
                             </Link>
                         </div>

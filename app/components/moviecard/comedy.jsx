@@ -76,7 +76,7 @@ const Comedy = () => {
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Comedy
                             </h2>
-                            <Link href='/category/Comedy' onClick={handleLinkClick}>
+                            <Link href='/category/comedy' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
                             </Link>
                         </div>

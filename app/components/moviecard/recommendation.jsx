@@ -73,7 +73,7 @@ const Recommendations = () => {
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Recommendations
                             </h2>
-                            <Link href='/category/Recommendations' onClick={handleLinkClick}>
+                            <Link href='/category/recommendations' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
                             </Link>
                         </div>

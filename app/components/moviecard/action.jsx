@@ -73,7 +73,7 @@ const Action = () => {
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Action
                             </h2>
-                            <Link href='/category/Action' onClick={handleLinkClick}>
+                            <Link href='/category/action' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
                             </Link>
                         </div>

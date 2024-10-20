@@ -18,10 +18,10 @@ const geistMono = localFont({
 // Global SEO metadata configuration
 const siteName = 'Flick Nest';
 const siteURL = 'https://flicknest.com';
-const description = "Welcome to Flick Nest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
+const description = "Welcome to Flick Nest, the best site to Watch Bollywood Movies Online For Free! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
 export const metadata = {
-  title: `${siteName} | Watch Bollywood Movies Online For Free `,
+  title: `${siteName} | Watch Bollywood Movies Online For Free`,
   description,
 };
 
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <NextSeo
-          title={`${siteName} | Watch Bollywood Movies Online For Free `}
+          title={`${siteName} | Watch Bollywood Movies Online For Free`}
           description={description}
           canonical={siteURL}
           openGraph={{
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
                 url: `${siteURL}/images/og-image.jpg`,
                 width: 800,
                 height: 600,
-                alt: `${siteName} - Watch Bollywood Movies Online For Free `,
+                alt: `${siteName} - Watch Bollywood Movies Online For Free`,
               },
             ],
             site_name: siteName,
@@ -55,14 +55,14 @@ export default function RootLayout({ children }) {
           additionalMetaTags={[
             {
               name: 'keywords',
-              content: 'watch Bollywood movies online for free,watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
+              content: 'watch Bollywood movies online for free, watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
             },
             {
               name: 'robots',
               content: 'index, follow',
             },
           ]}
-          // JSON-LD for Organization structured data
+          // JSON-LD Structured Data for Website, Organization, and SearchAction
           jsonLd={{
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -81,10 +81,110 @@ export default function RootLayout({ children }) {
             },
           }}
         />
+        {/* SearchAction Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              'url': siteURL,
+              'potentialAction': {
+                '@type': 'SearchAction',
+                'target': `${siteURL}/search/{search_term_string}`,
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
+
+        {/* BreadcrumbList Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              'itemListElement': [
+                {
+                  '@type': 'ListItem',
+                  'position': 1,
+                  'name': 'Home',
+                  'item': siteURL,
+                },
+                {
+                  '@type': 'ListItem',
+                  'position': 2,
+                  'name': 'Movies',
+                  'item': `${siteURL}/movies`,
+                },
+                {
+                  '@type': 'ListItem',
+                  'position': 3,
+                  'name': 'Action Movies',
+                  'item': `${siteURL}/category/action`,
+                },
+                {
+                  '@type': 'ListItem',
+                  'position': 3,
+                  'name': 'Comedy Movies',
+                  'item': `${siteURL}/category/comedy`,
+                },
+                {
+                  '@type': 'ListItem',
+                  'position': 3,
+                  'name': 'Drama',
+                  'item': `${siteURL}/category/drama`,
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* VideoObject Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'VideoObject',
+              'name': 'Watch Bollywood Movies Online',
+              'description': description,
+              'thumbnailUrl': `${siteURL}/images/og-image.jpg`,
+              'uploadDate': '2024-01-01T08:00:00+08:00',
+              'duration': 'PT2H30M', // Example duration
+              'contentUrl': `${siteURL}/movie-url`,
+              'embedUrl': `${siteURL}/embed/movie-url`,
+              'publisher': {
+                '@type': 'Organization',
+                'name': siteName,
+                'logo': {
+                  '@type': 'ImageObject',
+                  'url': `${siteURL}/logo.png`,
+                },
+              },
+            }),
+          }}
+        />
+
+        {/* WebPage Schema for enhancing general page understanding */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebPage',
+              'name': `${siteName} | Watch Bollywood Movies Online`,
+              'description': description,
+              'url': siteURL,
+            }),
+          }}
+        />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
