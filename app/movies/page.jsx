@@ -1,9 +1,13 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import { Button } from 'antd';
 import { PlayCircleOutlined } from '@ant-design/icons';
 import { NextSeo } from 'next-seo';
+import Link from 'next/link';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const movies = [
     {
@@ -109,12 +113,19 @@ const siteName = 'Flick Nest';
 const siteURL = 'https://flicknest.com';
 const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
-export const metadata = {
-    title: `${siteName} | Watch Bollywood Movies Online For Free `,
-    description: `${description}`,
-};
+
 
 const MoviesPage = () => {
+
+    const [loading, setLoading] = useState(false); // State to manage loading
+
+    const generateSlug = (title, id) => {
+        return `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${id}`;
+    };
+
+    const handleLinkClick = () => {
+        setLoading(true); // Set loading to true when link is clicked
+    };
 
     <NextSeo
         title={`${siteName} | Watch Bollywood Movies Online For Free `}
@@ -172,6 +183,8 @@ const MoviesPage = () => {
         <>
 
             <Navbar active='movies' />
+            {loading && <LoadingSpinner />} {/* Show spinner when loading */}
+
             {/* Movies List */}
             <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
@@ -180,39 +193,39 @@ const MoviesPage = () => {
                             Bollywood Movies
                         </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
-                            {movies.map((movie, index) => (
-                                <a
-                                    key={index}
-                                    href='/movies/helloworld'
-                                    className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
-                                >
-                                    <div className="">
-                                        <img
-                                            src={movie.img}
-                                            alt={`${movie.title} image`}
-                                            className="w-full aspect-square rounded-2xl object-cover"
-                                        />
-                                    </div>
-                                    <div className="mt-5">
-                                        <div className="flex items-center justify-between">
-                                            <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
-                                                {movie.title}
-                                            </h6>
+                            {movies.map((movie, index) => {
+                                const slug = generateSlug(movie.title, movie.id);
+                                return (
+                                    <Link key={index} href={`/movies/${slug}`} onClick={handleLinkClick} className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
+                                        <div className="">
+                                            <img
+                                                src={movie.img}
+                                                alt={`${movie.title} image`}
+                                                className="w-full aspect-square rounded-2xl object-cover"
+                                            />
                                         </div>
-                                        <p className="font-normal text-sm leading-6 text-gray-500">
-                                            {movie.description}
-                                        </p>
-                                        <p className="font-normal text-sm leading-6 text-gray-500">
-                                            {movie.release_year}
-                                        </p>
-                                    </div>
-                                    <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
-                                        
+                                        <div className="mt-5">
+                                            <div className="flex items-center justify-between">
+                                                <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
+                                                    {movie.title}
+                                                </h6>
+                                            </div>
+                                            <p className="font-normal text-sm leading-6 text-gray-500">
+                                                {movie.description}
+                                            </p>
+                                            <p className="font-normal text-sm leading-6 text-gray-500">
+                                                {movie.release_year}
+                                            </p>
+                                        </div>
+                                        <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
+
                                             <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
-                                        
-                                    </div>
-                                </a>
-                            ))}
+
+                                        </div>
+
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
