@@ -77,7 +77,7 @@ export default function MoviePage() {
         <div className="bg-white">
           <h2 className="text-2xl text-[#171717] font-semibold mb-4">You might also like</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Interstellar", "The Dark Knight", "Memento", "The Prestige"].map((movie) => (
+            {["Kuch Kuch Hota Hai", "Main Hoon Na", "Bhagwan", "Kal Ho Na Ho"].map((movie) => (
               <Card key={movie} hoverable>
                 <div className="aspect-video bg-muted rounded-md mb-2"></div>
                 <h3 className="font-medium">{movie}</h3>
