@@ -175,9 +175,12 @@ const footer = () => {
           </div>
         </div>
         <hr />
-        <div className='flex flex-col p-4 text-gray-600 flex-wrap justify-center items-center text-center'>
+        <div className='flex flex-col p-4  text-gray-600 flex-wrap justify-center items-center text-center'>
           <p>Copyright &copy; 2024 FlickNest. Build with ❤️ by Sankalpa Dahal.</p>
         </div>
+
+        <br className='block lg:hidden'/>
+        <br className='block lg:hidden'/>
 
         
       </footer>
