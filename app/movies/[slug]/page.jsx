@@ -77,15 +77,35 @@ export default function MoviePage() {
         <div className="bg-white">
           <h2 className="text-2xl text-[#171717] font-semibold mb-4">You might also like</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {["Kuch Kuch Hota Hai", "Main Hoon Na", "Bhagwan", "Kal Ho Na Ho"].map((movie) => (
-              <Card key={movie} hoverable>
-                <div className="aspect-video bg-muted rounded-md mb-2"></div>
-                <h3 className="font-medium">{movie}</h3>
+            {[
+              {
+                name: "Kuch Kuch Hota Hai",
+                image: "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg"
+              },
+              {
+                name: "Main Hoon Na",
+                image: "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg"
+              },
+              {
+                name: "Bhagwan",
+                image: "https://i.ytimg.com/vi/M6mcuySVazA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1xE9F-M8DWRmmCn4hHrTLYFRAlw"
+              },
+              {
+                name: "Kal Ho Na Ho",
+                image: "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6"
+              }
+            ].map((movie) => (
+              <Card key={movie.name} hoverable>
+                <div className="aspect-video bg-muted rounded-md mb-2 overflow-hidden">
+                  <img src={movie.image} alt={movie.name} className="object-cover w-full h-full rounded-lg" />
+                </div>
+                <h3 className="font-medium">{movie.name}</h3>
                 <p className="text-sm text-muted-foreground">Christopher Nolan</p>
               </Card>
             ))}
           </div>
         </div>
+
         <div className="hidden">
           <h2 className="text-2xl font-semibold mb-4">Comments</h2>
           <div className="space-y-4">
