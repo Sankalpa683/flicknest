@@ -76,7 +76,9 @@ const cult_classic = () => {
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Cult Classic
                             </h2>
-                            <p className='text-blue-700 cursor-pointer'>See all</p>
+                            <Link href='/category/Action' onClick={handleLinkClick}>
+                                <p className='text-blue-700 cursor-pointer'>See all</p>
+                            </Link>
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                             {movies.map((movie, index) => {
