@@ -14,12 +14,12 @@ export default function MoviePage() {
           <div className="lg:col-span-2 bg-white">
             <div className="aspect-video bg-white bg-muted rounded-lg overflow-hidden">
               <iframe
-                src="https://www.dailymotion.com/video/x8fx20i"
-                // src="https://mcloud.vvid30c.site/watch/?v41#aTFTR1hNUXBxTzV0cWRPUXFoSnpkN1BGdUd6TTlSMU5XeUMwRkdXTnRuY0xLRnRQMjhkK2hXS05XUmFkQ2pzWWpJdmk2ZnVMVHRrPQ"
+                src="https://www.dailymotion.com/embed/video/x8fx20i?autoplay=1&mute=1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>
+
             </div>
             <div className="my-5 text-[#171717] bg-white space-y-2 rounded-lg">
               <h1 className="text-3xl text-[#171717] font-bold">Dilwale Dulhania Le Jayenge (1995)</h1>
