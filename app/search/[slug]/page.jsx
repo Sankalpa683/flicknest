@@ -1,29 +1,35 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { Button } from 'antd';
 import { PlayCircleOutlined } from '@ant-design/icons';
 import { NextSeo } from 'next-seo';
+import Link from 'next/link';
+import LoadingSpinner from '@/app/components/LoadingSpinner';
 import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
 
 const movies = [
 
     {
-        title: 'Chak De! India',
-        release_year: '2007',
-        description: 'Sports Drama',
-        img: 'https://m.media-amazon.com/images/M/MV5BMTM2MjgyNDE5Nl5BMl5BanBnXkFtZTcwMzM1MDc4MQ@@._V1_.jpg',
+        id: '01',
+        title: 'Maharaja',
+        release_year: '2024',
+        description: 'Action & Adventure',
+        img: 'https://preview.redd.it/watched-maharaja-such-a-fantastic-screenplay-after-long-v0-ovmi808v77cd1.jpeg?auto=webp&s=004a4d77ec07ecadcb389b3b6298e68f83c38d3d',
     },
     {
-        title: 'DDLJ',
-        release_year: '1995',
+        id: '02',
+        title: 'Paa',
+        release_year: '2009',
         description: 'Romance',
-        img: 'https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg',
+        img: 'https://m.media-amazon.com/images/M/MV5BMDIzNWI1YTUtZmFjNy00ZjZhLTk1ZDItOTU3YjNhZWUxMjJhXkEyXkFqcGc@._V1_.jpg',
     },
     {
-        title: 'Lagaan',
-        release_year: '2001',
-        description: 'Historical Drama',
-        img: 'https://www.tallengestore.com/cdn/shop/products/7381744713908A_12c0d02b-1017-4503-919b-f0f4a503b387.jpg?v=1683929384',
+        id: '03',
+        title: 'Tumbbad',
+        release_year: '2018',
+        description: 'Comedy & Drama',
+        img: 'https://image.tmdb.org/t/p/original/z1xOCxw780WFJC5uCTMfCkQ4Agi.jpg',
     },
 
 ];
@@ -32,12 +38,18 @@ const siteName = 'FlickNest';
 const siteURL = 'https://flicknest.com';
 const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
-export const metadata = {
-    title: `${siteName} | Watch Bollywood Movies Online For Free `,
-    description,
-};
 
 const search = ({ params }) => {
+    const [loading, setLoading] = useState(false); // State to manage loading
+
+    const generateSlug = (title, id) => {
+        return `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${id}`;
+    };
+
+    const handleLinkClick = () => {
+        setLoading(true); // Set loading to true when link is clicked
+    };
+
     const searchTerm = params.slug || '';
 
     <NextSeo
@@ -89,6 +101,8 @@ const search = ({ params }) => {
     return (
         <>
             <Navbar active='movies' />
+            {loading && <LoadingSpinner />} {/* Show spinner when loading */}
+
             {/* Movies List */}
             <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
