@@ -1,13 +1,7 @@
-"use client";
-
 import { NextSeo } from 'next-seo';
 import localFont from 'next/font/local';
 import Head from 'next/head';
-import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
-import './globals.css'
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation'; // For tracking route changes in App Router
+import './globals.css';
 
 // Import local fonts
 const geistSans = localFont({
@@ -24,27 +18,19 @@ const geistMono = localFont({
 // Global SEO metadata configuration
 const siteName = 'FlickNest';
 const siteURL = 'https://flicknest.com';
-const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
+const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
 export const metadata = {
   title: `${siteName} | Watch Bollywood Movies Online For Free `,
-  description: `${description}`,
+  description,
 };
 
-
 export default function RootLayout({ children }) {
-  const pathname = usePathname(); // To detect route changes
-
-  useEffect(() => {
-    NProgress.start();
-    NProgress.done();
-  }, [pathname]); // Runs every time the pathname changes
-
   return (
     <html lang="en">
       <Head>
         <NextSeo
-          title={`${siteName} | Watch Bollywood Movies Online For Free`}
+          title={`${siteName} | Watch Bollywood Movies Online For Free `}
           description={description}
           canonical={siteURL}
           openGraph={{
@@ -56,7 +42,7 @@ export default function RootLayout({ children }) {
                 url: `${siteURL}/images/og-image.jpg`,
                 width: 800,
                 height: 600,
-                alt: `${siteName} - Watch Bollywood Movies Online For Free`,
+                alt: `${siteName} - Watch Bollywood Movies Online For Free `,
               },
             ],
             site_name: siteName,
@@ -69,7 +55,7 @@ export default function RootLayout({ children }) {
           additionalMetaTags={[
             {
               name: 'keywords',
-              content: 'watch Bollywood movies online for free, watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
+              content: 'watch Bollywood movies online for free,watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
             },
             {
               name: 'robots',
@@ -98,7 +84,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
         {children}
       </body>
     </html>
