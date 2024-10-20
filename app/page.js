@@ -22,8 +22,6 @@ const page = () => {
         <Drama />
       </main>
       <Footer />
-      <br className='block sm:hidden'/>
-      <br className='block sm:hidden'/>
     </>
   )
 }
