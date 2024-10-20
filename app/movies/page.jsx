@@ -111,7 +111,7 @@ const description = "Welcome to FlickNest, the best site to Watch Bollywood Movi
 
 export const metadata = {
     title: `${siteName} | Watch Bollywood Movies Online For Free `,
-    description,
+    description: `${description}`,
 };
 
 const MoviesPage = () => {
