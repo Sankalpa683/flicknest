@@ -21,8 +21,8 @@ export default function MoviePage() {
                 className="w-full h-full"
               ></iframe>
             </div>
-            <div className="my-5 bg-white space-y-2 rounded-lg">
-              <h1 className="text-3xl font-bold">Dilwale Dulhania Le Jayenge (1995)</h1>
+            <div className="my-5 text-[#171717] bg-white space-y-2 rounded-lg">
+              <h1 className="text-3xl text-[#171717] font-bold">Dilwale Dulhania Le Jayenge (1995)</h1>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <span>1995</span>
                 <span>•</span>
@@ -35,7 +35,7 @@ export default function MoviePage() {
                   <span className="ml-1">8.8/10</span>
                 </div>
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-[#727272]">
                 When Raj (Shah Rukh Khan) and Simran (Kajol) first met on an inter-rail holiday in Europe, it wasn't exactly Love at first sight but when Simran is taken back to India for an arranged marriage, things change. Encouraged by his father Dharamvir (Anupam Kher), Raj decides to fly down from London to not just win his Bride but her whole family and the blessings of her father Baldev Singh (Amrish Puri). Written by
                 Official Source
               </p>
@@ -75,7 +75,7 @@ export default function MoviePage() {
           </div>
         </div>
         <div className="bg-white">
-          <h2 className="text-2xl font-semibold mb-4">You might also like</h2>
+          <h2 className="text-2xl text-[#171717] font-semibold mb-4">You might also like</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {["Interstellar", "The Dark Knight", "Memento", "The Prestige"].map((movie) => (
               <Card key={movie} hoverable>
