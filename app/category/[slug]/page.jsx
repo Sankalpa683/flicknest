@@ -192,8 +192,8 @@ const search = ({ params }) => {
                 </div>
             </section>
 
-            <br className='block lg:hidden' />
-            <br className='block lg:hidden' />
+            <br className='block lg:hidden bg-white' />
+            <br className='block lg:hidden bg-white' />
 
             <Footer />
         </>
