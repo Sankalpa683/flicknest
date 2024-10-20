@@ -22,6 +22,16 @@ body {
   font-style: normal;
 }
 
+/* styles/globals.css or styles/LoadingSpinner.module.css */
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Ensure it appears above other content */
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { Menu, Dropdown, Input, Modal } from 'antd';
+import { Menu, Dropdown, Input, Modal, Spin } from 'antd';
 import { AppstoreOutlined, HomeOutlined, BookOutlined, SearchOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import Logo from '@/public/logo.png';
@@ -11,19 +11,18 @@ import Sankalpa from '@/public/user.png';
 
 const Navbar = ({ active }) => {
     const router = useRouter();
-    
-    // State to handle the visibility of the search modal and the search query
+
     const [isSearchVisible, setIsSearchVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+    const [loading, setLoading] = useState(false); // Loading state
 
-    // Function to handle search logic
-    const onSearch = (value) => {
+    const onSearch = async (value) => {
         if (value.trim()) {
-            router.push(`/search/${value.trim()}`);
+            setLoading(true); // Set loading to true when search starts
+            await router.push(`/search/${value.trim()}`);
         }
     };
 
-    // Links for the dropdown (Profile)
     const links = (
         <Menu>
             <Menu.Item key="1" disabled>
@@ -40,16 +39,14 @@ const Navbar = ({ active }) => {
         <>
             <header className="py-2 sticky top-0 z-50 bg-white ">
                 <nav className="flex justify-between items-center mx-4 md:mx-6">
-                    {/* Logo */}
                     <div className="flex items-center gap-4 md:gap-4">
                         <Link href="/">
                             <Image src={Logo} width={120} height={90} alt="Logo" />
                         </Link>
 
-                        {/* Desktop Menu */}
                         <div className="hidden lg:flex">
                             <Menu
-                                selectedKeys={[active]} // Dynamically highlight the active menu item
+                                selectedKeys={[active]}
                                 mode="horizontal"
                                 className="flex space-x-4"
                             >
@@ -66,11 +63,10 @@ const Navbar = ({ active }) => {
                         </div>
                     </div>
 
-                    {/* Mobile Menu Icon (Hamburger) */}
                     <div className="flex items-center text-black gap-4">
                         <SearchOutlined
                             className="cursor-pointer text-black text-xl"
-                            onClick={() => setIsSearchVisible(true)} // Open the search modal
+                            onClick={() => setIsSearchVisible(true)}
                         />
                         <Dropdown overlay={links} trigger={['click']}>
                             <a onClick={(e) => e.preventDefault()}>
@@ -81,14 +77,18 @@ const Navbar = ({ active }) => {
                 </nav>
             </header>
 
-            {/* Search Modal */}
             <Modal
                 visible={isSearchVisible}
                 footer={null}
-                onCancel={() => setIsSearchVisible(false)} // Close the modal
+                onCancel={() => setIsSearchVisible(false)}
                 closable={true}
                 title="Search Movies"
             >
+                {loading && (
+                    <div className="flex justify-center my-4">
+                        <Spin size="small" />
+                    </div>
+                )}
                 <Input.Search
                     placeholder="Search for movies..."
                     enterButton
@@ -96,6 +96,7 @@ const Navbar = ({ active }) => {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onSearch={onSearch}
                 />
+
             </Modal>
 
             {/* Mobile Navbar */}

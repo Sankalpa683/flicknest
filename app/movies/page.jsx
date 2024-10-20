@@ -105,7 +105,7 @@ const movies = [
 
 ];
 
-const siteName = 'FlickNest';
+const siteName = 'Flick Nest';
 const siteURL = 'https://flicknest.com';
 const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
@@ -183,7 +183,7 @@ const MoviesPage = () => {
                             {movies.map((movie, index) => (
                                 <a
                                     key={index}
-                                    href="javascript:;"
+                                    href='/movies/helloworld'
                                     className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
                                 >
                                     <div className="">
@@ -207,7 +207,9 @@ const MoviesPage = () => {
                                         </p>
                                     </div>
                                     <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
-                                        <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
+                                        
+                                            <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
+                                        
                                     </div>
                                 </a>
                             ))}

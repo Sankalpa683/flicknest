@@ -25,7 +25,24 @@ const movies = [
         description: 'Historical Drama',
         img: 'https://www.tallengestore.com/cdn/shop/products/7381744713908A_12c0d02b-1017-4503-919b-f0f4a503b387.jpg?v=1683929384',
     },
-
+    {
+        title: 'DDLJ',
+        release_year: '1995',
+        description: 'Romance',
+        img: 'https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg',
+    },
+    {
+        title: 'Lagaan',
+        release_year: '2001',
+        description: 'Historical Drama',
+        img: 'https://www.tallengestore.com/cdn/shop/products/7381744713908A_12c0d02b-1017-4503-919b-f0f4a503b387.jpg?v=1683929384',
+    },
+    {
+        title: 'Chak De! India',
+        release_year: '2007',
+        description: 'Sports Drama',
+        img: 'https://m.media-amazon.com/images/M/MV5BMTM2MjgyNDE5Nl5BMl5BanBnXkFtZTcwMzM1MDc4MQ@@._V1_.jpg',
+    },
 ];
 
 const siteName = 'FlickNest';
@@ -38,22 +55,23 @@ export const metadata = {
 };
 
 const search = ({ params }) => {
-    const searchTerm = params.slug || '';
+
+    const category = params.slug;
 
     <NextSeo
-        title={`${siteName} | Search Results`}
+        title={`${siteName} | Watch Bollywood Movies Online For Free `}
         description={description}
-        canonical={`${siteURL}/search/${searchTerm}`}
+        canonical={siteURL}
         openGraph={{
-            url: `${siteURL}/search/${searchTerm}`,
-            title: `${siteName} | Search Results`,
+            url: siteURL,
+            title: `${siteName} | Watch Free Bollywood Movies Online`,
             description,
             images: [
                 {
                     url: `${siteURL}/images/og-image.jpg`,
                     width: 800,
                     height: 600,
-                    alt: `${siteName} - Search Results`,
+                    alt: `${siteName} - Watch Bollywood Movies Online For Free `,
                 },
             ],
             site_name: siteName,
@@ -66,23 +84,29 @@ const search = ({ params }) => {
         additionalMetaTags={[
             {
                 name: 'keywords',
-                content: 'search Bollywood movies, online streaming, watch movies free',
+                content: 'watch Bollywood movies online for free,watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
             },
             {
                 name: 'robots',
                 content: 'index, follow',
             },
         ]}
+        // JSON-LD for Organization structured data
         jsonLd={{
             '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: `${siteName} | Search Results`,
-            description,
-            url: `${siteURL}/search/${searchTerm}`,
-            potentialAction: {
-                '@type': 'SearchAction',
-                target: `${siteURL}/search/{search_term_string}`,
-                queryinput: 'required name=search_term_string',
+            '@type': 'Organization',
+            url: siteURL,
+            logo: `${siteURL}/images/logo.png`,
+            name: siteName,
+            sameAs: [
+                'https://www.facebook.com/flicknest',
+                'https://www.instagram.com/flicknest',
+                'https://www.twitter.com/flicknest',
+            ],
+            contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1-800-555-5555',
+                contactType: 'Customer Support',
             },
         }}
     />
@@ -94,13 +118,13 @@ const search = ({ params }) => {
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
                         <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                            Search Results
+                            Category Genre
                         </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                             {movies.map((movie, index) => (
                                 <a
                                     key={index}
-                                    href="javascript:;"
+                                    href="/movies/"
                                     className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
                                 >
                                     <div className="">

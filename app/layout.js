@@ -16,9 +16,9 @@ const geistMono = localFont({
 });
 
 // Global SEO metadata configuration
-const siteName = 'FlickNest';
+const siteName = 'Flick Nest';
 const siteURL = 'https://flicknest.com';
-const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
+const description = "Welcome to Flick Nest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
 
 export const metadata = {
   title: `${siteName} | Watch Bollywood Movies Online For Free `,
