@@ -100,7 +100,7 @@ const Navbar = ({ active }) => {
             </Modal>
 
             {/* Mobile Navbar */}
-            <div className="lg:hidden fixed -bottom-1 py-1 left-0 right-0 text-black bg-white shadow-lg border-t border-gray-300">
+            <div className="lg:hidden fixed -bottom-1 z-50 py-1 left-0 right-0 text-black bg-white shadow-lg border-t border-gray-300">
                 <nav className="flex justify-around py-2">
                     <Link href="/" className="flex flex-col items-center text-center">
                         <HomeOutlined className="text-xl" />

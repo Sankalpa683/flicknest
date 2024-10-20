@@ -178,7 +178,7 @@ const MoviesPage = () => {
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
                         <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                            Bollywood Movies
+                            All Bollywood Movies
                         </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                             {movies.map((movie, index) => {
