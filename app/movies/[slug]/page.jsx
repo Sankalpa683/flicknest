@@ -22,7 +22,7 @@ export default function MoviePage() {
 
             </div>
             <div className="my-5 text-[#171717] bg-white space-y-2 rounded-lg">
-              <h1 className="text-3xl text-[#171717] font-bold">Dilwale Dulhania Le Jayenge (1995)</h1>
+              <h1 className="text-3xl text-[#171717] font-bold">Dilwale Dulhania Li Jayenge FuII Movie - Kajol, Shahrukh Khan DDLJ</h1>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <span>1995</span>
                 <span>•</span>
