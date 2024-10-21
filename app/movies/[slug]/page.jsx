@@ -105,27 +105,6 @@ export default function MoviePage() {
             ))}
           </div>
         </div>
-
-        <div className="hidden">
-          <h2 className="text-2xl font-semibold mb-4">Comments</h2>
-          <div className="space-y-4">
-            {[
-              { user: "Alice", comment: "This movie blew my mind! The concept is so original." },
-              { user: "Bob", comment: "I've watched it 3 times and I still find new details every time." },
-              { user: "Charlie", comment: "The visual effects are stunning. Definitely deserved the Oscar." },
-            ].map((comment, index) => (
-              <Card key={index}>
-                <div className="flex items-center space-x-4">
-                  <Avatar>{comment.user[0]}</Avatar>
-                  <div>
-                    <p className="font-medium">{comment.user}</p>
-                    <p className="text-sm text-muted-foreground">{comment.comment}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
       </div>
       <Footer />
     </>

@@ -6,6 +6,7 @@ import { PlayCircleOutlined } from '@ant-design/icons';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Navbar from '../components/navbar';
+import { siteConfig } from '../config/siteConfig';
 import Footer from '../components/footer';
 import LoadingSpinner from '../components/LoadingSpinner';
 
@@ -97,10 +98,9 @@ const movies = [
 
 ];
 
-const siteName = 'Flick Nest';
-const siteURL = 'https://flicknest.com';
-const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
-
+const siteName = `${siteConfig.name}`;
+const siteURL = `${siteConfig.url}`;
+const description = `${siteConfig.description}`;
 
 
 const MoviesPage = () => {

@@ -1,52 +1,75 @@
+"use client"
+
+import { useSearchParams } from 'next/navigation';
 import { NextSeo } from 'next-seo';
 import localFont from 'next/font/local';
 import Head from 'next/head';
-import { siteConfig } from './config/siteConfig';
-import './globals.css';
+import '../globals.css';
+import { siteConfig } from '../config/siteConfig';
 
 // Import local fonts
 const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
+  src: '../fonts/GeistVF.woff',
   variable: '--font-geist-sans',
   weight: '100 900',
 });
 const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
+  src: '../fonts/GeistMonoVF.woff',
   variable: '--font-geist-mono',
   weight: '100 900',
 });
 
 // Global SEO metadata configuration
-const siteName = `${siteConfig.name}`;
-const siteURL = `${siteConfig.url}`;
-const description = `${siteConfig.description}`;
-
-export const metadata = {
-  title: `${siteName} | Watch Bollywood Movies Online For Free`,
-  description,
+const defaultTitle = `Watch Bollywood Movies Online For Free at ${siteConfig.name}`;
+const defaultDescription = `${siteConfig.description}`;
+// Utility function to handle dynamic SEO based on search terms
+const getDynamicSEO = (query) => {
+  if (query.includes('Bollywood movies watch online')) {
+    return {
+      title: 'Watch Bollywood Movies Online for Free | Flick Nest',
+      description: `Looking to watch Bollywood movies online? Flick Nest offers a massive collection of Bollywood movies you can stream for free! Watch your favorite movies from anywhere, no registration needed.`,
+      keywords:
+        'Bollywood movies watch online, free Bollywood streaming, watch Bollywood movies for free, Bollywood movies online',
+      url: `${siteConfig.url}/movies`,
+    };
+  }
+  // Add more dynamic conditions here for other keywords
+  return {
+    title: defaultTitle,
+    description: defaultDescription,
+    keywords:
+      'watch Bollywood movies online for free, Bollywood streaming, watch Bollywood movies free, movie watch online',
+    url: `${siteConfig.url}`,
+  };
 };
 
 export default function RootLayout({ children }) {
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get('search') || ''; // Get the search query from the URL
+
+  // Get dynamic SEO based on search query
+  const { title, description, keywords, url } = getDynamicSEO(searchQuery);
+
   return (
     <html lang="en">
       <Head>
         <NextSeo
-          title={`${siteName} | Watch Bollywood Movies Online For Free`}
+          title={title}
           description={description}
-          canonical={siteURL}
+          canonical={url}
           openGraph={{
-            url: siteURL,
-            title: `${siteName} | Watch Free Bollywood Movies Online`,
-            description,
+            url: url,
+            title: title,
+            description: description,
             images: [
               {
-                url: `${siteURL}/images/og-image.jpg`,
+                url: `${url}/images/og-image.jpg`,
                 width: 800,
                 height: 600,
-                alt: `${siteName} - Watch Bollywood Movies Online For Free`,
+                alt: `${title} - Watch Bollywood Movies Online`,
               },
             ],
-            site_name: siteName,
+            site_name: 'Flick Nest',
           }}
           twitter={{
             handle: '@flicknest',
@@ -56,7 +79,7 @@ export default function RootLayout({ children }) {
           additionalMetaTags={[
             {
               name: 'keywords',
-              content: 'watch Bollywood movies online for free, watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
+              content: keywords,
             },
             {
               name: 'robots',
@@ -67,9 +90,9 @@ export default function RootLayout({ children }) {
           jsonLd={{
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            url: siteURL,
-            logo: `${siteURL}/logo.png`,
-            name: siteName,
+            url: url,
+            logo: `${url}/logo.png`,
+            name: 'Flick Nest',
             sameAs: [
               'https://www.facebook.com/flicknest',
               'https://www.instagram.com/flicknest',
@@ -82,6 +105,7 @@ export default function RootLayout({ children }) {
             },
           }}
         />
+
         {/* SearchAction Schema */}
         <script
           type="application/ld+json"
@@ -89,10 +113,10 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              'url': siteURL,
-              'potentialAction': {
+              url: url,
+              potentialAction: {
                 '@type': 'SearchAction',
-                'target': `${siteURL}/search/{search_term_string}`,
+                target: `${url}/search/{search_term_string}`,
                 'query-input': 'required name=search_term_string',
               },
             }),
@@ -106,36 +130,24 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
-              'itemListElement': [
+              itemListElement: [
                 {
                   '@type': 'ListItem',
-                  'position': 1,
-                  'name': 'Home',
-                  'item': siteURL,
+                  position: 1,
+                  name: 'Action Movies',
+                  item: `${url}/category/action`,
                 },
                 {
                   '@type': 'ListItem',
-                  'position': 2,
-                  'name': 'Movies',
-                  'item': `${siteURL}/movies`,
+                  position: 2,
+                  name: 'Comedy Movies',
+                  item: `${url}/category/comedy`,
                 },
                 {
                   '@type': 'ListItem',
-                  'position': 3,
-                  'name': 'Action Movies',
-                  'item': `${siteURL}/category/action`,
-                },
-                {
-                  '@type': 'ListItem',
-                  'position': 3,
-                  'name': 'Comedy Movies',
-                  'item': `${siteURL}/category/comedy`,
-                },
-                {
-                  '@type': 'ListItem',
-                  'position': 3,
-                  'name': 'Drama',
-                  'item': `${siteURL}/category/drama`,
+                  position: 3,
+                  name: 'Romantic Movies',
+                  item: `${url}/category/romance`,
                 },
               ],
             }),
@@ -149,19 +161,19 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'VideoObject',
-              'name': 'Watch Bollywood Movies Online',
-              'description': description,
-              'thumbnailUrl': `${siteURL}/images/og-image.jpg`,
-              'uploadDate': '2024-01-01T08:00:00+08:00',
-              'duration': 'PT2H30M', // Example duration
-              'contentUrl': `${siteURL}/movie-url`,
-              'embedUrl': `${siteURL}/embed/movie-url`,
-              'publisher': {
+              name: 'Watch Bollywood Movies Online',
+              description: description,
+              thumbnailUrl: `${url}/images/og-image.jpg`,
+              uploadDate: '2024-01-01T08:00:00+08:00',
+              duration: 'PT2H30M',
+              contentUrl: `${url}/movie-url`,
+              embedUrl: `${url}/embed/movie-url`,
+              publisher: {
                 '@type': 'Organization',
-                'name': siteName,
-                'logo': {
+                name: 'Flick Nest',
+                logo: {
                   '@type': 'ImageObject',
-                  'url': `${siteURL}/logo.png`,
+                  url: `${url}/logo.png`,
                 },
               },
             }),
@@ -175,9 +187,9 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              'name': `${siteName} | Watch Bollywood Movies Online`,
-              'description': description,
-              'url': siteURL,
+              name: title,
+              description: description,
+              url: url,
             }),
           }}
         />

@@ -4,6 +4,7 @@ import { Button } from 'antd';
 import { PlayCircleOutlined } from '@ant-design/icons';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
+import { siteConfig } from '@/app/config/siteConfig';
 import LoadingSpinner from '@/app/components/LoadingSpinner';
 import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
@@ -34,10 +35,9 @@ const movies = [
 
 ];
 
-const siteName = 'FlickNest';
-const siteURL = 'https://flicknest.com';
-const description = "Welcome to FlickNest, the best site to Watch Bollywood Movies Online For Free ! Enjoy a vast collection of your favorite films from the latest blockbusters to timeless classics, all available for streaming at no cost. Our user-friendly platform makes it easy to watch online Bollywood movies for free without any registration required. Whether you're looking for action, romance, or drama, FlickNest is your go-to destination for watching movies online. Join us now to explore and indulge in a cinematic experience like no other!";
-
+const siteName = `${siteConfig.name}`;
+const siteURL = `${siteConfig.url}`;
+const description = `${siteConfig.description}`;
 
 const search = ({ params }) => {
     const [loading, setLoading] = useState(false); // State to manage loading
