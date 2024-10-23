@@ -55,8 +55,8 @@ const movies = [
 const Action = () => {
     const [loading, setLoading] = useState(false); // State to manage loading
 
-    const generateSlug = (title, id) => {
-        return `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${id}`;
+    const generateSlug = (title) => {
+        return `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     };
 
     const handleLinkClick = () => {

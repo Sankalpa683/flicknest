@@ -11,9 +11,9 @@ import Footer from '../components/footer';
 import LoadingSpinner from '../components/LoadingSpinner';
 import axios from 'axios';
 
-const siteName = `${siteConfig.name}`;
-const siteURL = `${siteConfig.url}`;
-const description = `${siteConfig.description}`;
+const siteName = siteConfig.name;
+const siteURL = siteConfig.url;
+const description = siteConfig.description;
 
 const MoviesPage = () => {
     const [movies, setMovies] = useState([]); // State to hold movie data
@@ -42,7 +42,7 @@ const MoviesPage = () => {
     return (
         <>
             <NextSeo
-                title={`${siteName} | Watch Bollywood Movies Online For Free `}
+                title={`${siteName} | Watch Bollywood Movies Online For Free`}
                 description={description}
                 canonical={siteURL}
                 openGraph={{
@@ -54,7 +54,7 @@ const MoviesPage = () => {
                             url: `${siteURL}/images/og-image.jpg`,
                             width: 800,
                             height: 600,
-                            alt: `${siteName} - Watch Bollywood Movies Online For Free `,
+                            alt: `${siteName} - Watch Bollywood Movies Online For Free`,
                         },
                     ],
                     site_name: siteName,
@@ -104,35 +104,38 @@ const MoviesPage = () => {
                             All Bollywood Movies
                         </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
-                            {movies.map((movie, index) => {
-                                return (
-                                    <Link key={index} href={`/movies/${movie.slug}`} onClick={handleLinkClick} className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
-                                        <div>
-                                            <img
-                                                src={movie.movie_poster_img}
-                                                alt={`${movie.title} image`}
-                                                className="w-full aspect-square rounded-2xl object-cover"
-                                            />
+                            {movies.map((movie, index) => (
+                                <Link
+                                    key={index}
+                                    href={`/movies/${movie.slug}`}
+                                    onClick={handleLinkClick}
+                                    className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
+                                >
+                                    <div>
+                                        <img
+                                            src={movie.movie_poster_img}
+                                            alt={`${movie.title} image`}
+                                            className="w-full aspect-square rounded-2xl object-cover"
+                                        />
+                                    </div>
+                                    <div className="mt-5">
+                                        <div className="flex items-center justify-between">
+                                            <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
+                                                {movie.title}
+                                            </h6>
                                         </div>
-                                        <div className="mt-5">
-                                            <div className="flex items-center justify-between">
-                                                <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
-                                                    {movie.title}
-                                                </h6>
-                                            </div>
-                                            <p className="font-normal text-sm leading-6 text-gray-500">
-                                                {movie.genres}
-                                            </p>
-                                            <p className="font-normal text-sm leading-6 text-gray-500">
-                                                {movie.release_year}
-                                            </p>
-                                        </div>
-                                        <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
-                                            <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
-                                        </div>
-                                    </Link>
-                                );
-                            })}
+                                        <p className="font-normal text-sm leading-6 text-gray-500">
+                                            {movie.genres}
+                                        </p>
+                                        <p className="font-normal text-sm leading-6 text-gray-500">
+                                            {movie.release_year}
+                                        </p>
+                                    </div>
+                                    <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
+                                        <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </div>

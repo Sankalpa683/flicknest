@@ -18,7 +18,7 @@ const movies = [
     },
     {
         id: '02',
-        title: 'DDLJ',
+        title: 'Dilwale Dulhania Le Jayenge',
         release_year: '1995',
         description: 'Romance',
         img: 'https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg',
@@ -58,7 +58,7 @@ const Drama = () => {
     const [loading, setLoading] = useState(false); // State to manage loading
 
     const generateSlug = (title, id) => {
-        return `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${id}`;
+        return `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     };
 
     const handleLinkClick = () => {
