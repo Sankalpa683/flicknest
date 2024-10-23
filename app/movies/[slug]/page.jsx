@@ -2,7 +2,6 @@ import { Button, Card, Avatar, Badge } from "antd";
 import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled } from "@ant-design/icons";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
-import axios from "axios";
 import moviesData from '@/public/movies.json';
 
 // Generate static paths for SEO
@@ -119,6 +118,14 @@ export async function generateMetadata({ params }) {
   const { slug } = params;
   const movie = moviesData.find(movie => movie.slug === slug);
 
+  // Ensure movie exists for metadata generation
+  if (!movie) {
+    return {
+      title: "Movie not found",
+      description: "The requested movie does not exist.",
+    };
+  }
+
   // Ensure you have keywords relevant to your content
   const keywords = [
     movie.title,
@@ -207,19 +214,18 @@ export async function generateMetadata({ params }) {
           {
             '@type': 'ListItem',
             position: 3,
-            name: movie.title,
-            item: `https://bollycinemahub.in/movies/${slug}`,
+            name: "Dilwale Dulhania Le Jayenge",
+            item: `https://bollycinemahub.in/movies/dilwale-dulhania-le-jayenge`,
           },
         ],
       },
-      // Adding WebPage schema for better page context
-      mainEntityOfPage: {
+       // Adding WebPage schema for better page context
+       mainEntityOfPage: {
         '@type': 'WebPage',
         '@id': `https://bollycinemahub.in/movies/${slug}`,
       },
     },
   };
 }
-
 
 export default MoviePage;
