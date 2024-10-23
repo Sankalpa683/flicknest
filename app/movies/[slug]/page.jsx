@@ -1,36 +1,56 @@
+"use client";
+
 import { Button, Card, Avatar, Badge } from "antd";
 import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled } from "@ant-design/icons";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
-import moviesData from '@/public/movies.json';
-import { Suspense } from 'react';
+import { useEffect, useState } from "react";
+import axios from "axios";
+// import { useRouter } from 'next/router'; // Import useRouter to get the slug from the URL
 
-// Generate static paths for SEO
-export async function generateStaticParams() {
-  const movies = moviesData; // Load movie data from local JSON
-  return movies.map(movie => ({
-    slug: movie.slug,
-  }));
-}
+const MoviePage = ({ params }) => {
+  // const router = useRouter(); // Get the router object
+  const { slug } = params; // Extract the slug from the URL
+  const [movie, setMovie] = useState(null);
+  const [relatedMovies, setRelatedMovies] = useState([
+    {
+      name: "Kuch Kuch Hota Hai",
+      image: "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg"
+    },
+    {
+      name: "Main Hoon Na",
+      image: "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg"
+    },
+    {
+      name: "Bhagwan",
+      image: "https://i.ytimg.com/vi/M6mcuySVazA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1xE9F-M8DWRmmCn4hHrTLYFRAlw"
+    },
+    {
+      name: "Kal Ho Na Ho",
+      image: "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6"
+    }
+  ]);
 
-// Fetch movie data and render the page
-const MoviePage = async ({ params }) => {
-  const { slug } = params;
-  const movies = moviesData; // Load movie data from local JSON
+  useEffect(() => {
+    const fetchMovieData = async () => {
+      try {
+        const response = await axios.get('/movies.json'); // Adjust the path as necessary
+        const movies = response.data;
+        const selectedMovie = movies.find(movie => movie.slug === slug); // Fetch movie details based on slug
+        setMovie(selectedMovie);
+      } catch (error) {
+        console.error("Error fetching movie data:", error);
+      }
+    };
 
-  const movie = movies.find(movie => movie.slug === slug);
+    if (slug) { // Ensure slug is available before fetching
+      fetchMovieData();
+    }
+  }, [slug]); // Dependency array includes slug
 
   if (!movie) {
-    return <div>Movie not found.</div>;
+    return <div>Loading...</div>; // Handle loading state
   }
-
-  // Related movies for recommendations
-  const relatedMovies = [
-    { name: "Kuch Kuch Hota Hai", image: "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg" },
-    { name: "Main Hoon Na", image: "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg" },
-    { name: "Bhagwan", image: "https://i.ytimg.com/vi/M6mcuySVazA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1xE9F-M8DWRmmCn4hHrTLYFRAlw" },
-    { name: "Kal Ho Na Ho", image: "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6" },
-  ];
 
   return (
     <>
@@ -40,13 +60,13 @@ const MoviePage = async ({ params }) => {
           <div className="lg:col-span-2 bg-white">
             <div className="aspect-video bg-white bg-muted rounded-lg overflow-hidden">
               <iframe
-                src={movie.embedUrl}
+                src={movie.embedUrl} // Use the movie's embed URL
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>
             </div>
-            <div className="my-5 text-[#171717] bg-white space-y-2">
+            <div className="my-5 text-[#171717] bg-white space-y-2 rounded-lg">
               <h1 className="text-2xl text-[#171717] font-bold">{movie.title}</h1>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <span>{movie.year}</span>
@@ -60,7 +80,9 @@ const MoviePage = async ({ params }) => {
                   <span className="ml-1">{movie.rating}/10</span>
                 </div>
               </div>
-              <p className="text-muted-foreground mt-2 text-[#727272]">{movie.movie_description}</p>
+              <p className="text-muted-foreground mt-2 text-[#727272]">
+                {movie.movie_description}
+              </p>
               <div className="flex space-x-2 py-3">
                 {movie.genres.map((genre) => (
                   <Badge key={genre} color="blue">{genre}</Badge>
@@ -113,116 +135,5 @@ const MoviePage = async ({ params }) => {
     </>
   );
 };
-
-// Adding structured data for SEO
-export async function generateMetadata({ params }) {
-  const { slug } = params;
-  const movie = moviesData.find(movie => movie.slug === slug);
-
-  // Ensure movie exists for metadata generation
-  if (!movie) {
-    return {
-      title: "Movie not found",
-      description: "The requested movie does not exist.",
-    };
-  }
-
-  // Ensure you have keywords relevant to your content
-  const keywords = [
-    movie.title,
-    movie.year,
-    movie.language,
-    ...movie.genres,
-    "watch online",
-    "full movie",
-    "free streaming",
-    "HD",
-  ].join(', ');
-
-  return {
-    title: `Watch ${movie.title} (${movie.year}) - Full Movie Online for Free | Bolly Cinema Hub `,
-    description: `${movie.movie_description} .Watch ${movie.title} for free in HD. Stream now!`,
-    keywords, // Add keywords for better SEO
-    viewport: 'width=device-width, initial-scale=1', // Add viewport meta tag
-    openGraph: {
-      title: movie.title,
-      description: movie.movie_description,
-      url: `https://bollycinemahub.in/movies/${slug}`,
-      images: [movie.movie_poster_img],
-      type: 'video.other', // Specify the type for better understanding
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: movie.title,
-      description: movie.movie_description,
-      images: [movie.movie_poster_img],
-    },
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'Movie',
-      name: movie.title,
-      description: movie.movie_description,
-      image: movie.movie_poster_img,
-      director: {
-        '@type': 'Person',
-        name: movie.director,
-      },
-      actor: movie.actors.map(actor => ({
-        '@type': 'Person',
-        name: actor,
-      })),
-      genre: movie.genres,
-      dateCreated: movie.year,
-      duration: `PT${movie.duration}M`,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: movie.rating,
-        reviewCount: 100, // Adjust based on real data
-      },
-      // Adding VideoObject schema
-      video: {
-        '@type': 'VideoObject',
-        name: movie.title,
-        description: movie.movie_description,
-        thumbnailUrl: movie.movie_poster_img,
-        uploadDate: new Date().toISOString(), // Specify upload date
-        duration: `PT${movie.duration}M`,
-        contentUrl: movie.embedUrl, // Embed URL for the video
-        embedUrl: movie.embedUrl,
-        interactionStatistic: {
-          '@type': 'InteractionCounter',
-          interactionType: {
-            '@type': 'WatchAction',
-          },
-          userInteractionCount: 1000, // Adjust based on real data
-        },
-      },
-      // Adding BreadcrumbList for site navigation
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://bollycinemahub.in/',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Movies',
-            item: 'https://bollycinemahub.in/movies',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: "Dilwale Dulhania Le Jayenge",
-            item: `https://bollycinemahub.in/movies/dilwale-dulhania-le-jayenge`,
-          },
-        ],
-      },
-    },
-  };
-}
 
 export default MoviePage;
