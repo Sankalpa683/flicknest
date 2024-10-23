@@ -3,6 +3,7 @@ import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled } from "@ant-d
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import moviesData from '@/public/movies.json';
+import { Suspense } from 'react';
 
 // Generate static paths for SEO
 export async function generateStaticParams() {
@@ -142,6 +143,7 @@ export async function generateMetadata({ params }) {
     title: `Watch ${movie.title} (${movie.year}) - Full Movie Online for Free | Bolly Cinema Hub `,
     description: `${movie.movie_description} .Watch ${movie.title} for free in HD. Stream now!`,
     keywords, // Add keywords for better SEO
+    viewport: 'width=device-width, initial-scale=1', // Add viewport meta tag
     openGraph: {
       title: movie.title,
       description: movie.movie_description,
@@ -218,11 +220,6 @@ export async function generateMetadata({ params }) {
             item: `https://bollycinemahub.in/movies/dilwale-dulhania-le-jayenge`,
           },
         ],
-      },
-       // Adding WebPage schema for better page context
-       mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': `https://bollycinemahub.in/movies/${slug}`,
       },
     },
   };
