@@ -41,14 +41,14 @@ const Navbar = ({ active }) => {
                 <nav className="flex justify-between items-center mx-4 md:mx-6">
                     <div className="flex items-center gap-4 md:gap-4">
                         <Link href="/">
-                            <Image src={Logo} width={120} height={90} alt="Logo" />
+                            <Image src={Logo} width={190} height={90} alt="Logo" />
                         </Link>
 
-                        <div className="hidden lg:flex">
+                        <div className="ml-8 hidden lg:flex">
                             <Menu
                                 selectedKeys={[active]}
                                 mode="horizontal"
-                                className="flex space-x-4"
+                                className="flex space-x-5"
                             >
                                 <Menu.Item key="home" icon={<HomeOutlined />}>
                                     <Link href="/">Home</Link>

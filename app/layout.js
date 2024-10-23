@@ -24,7 +24,43 @@ const description = `${siteConfig.description}`;
 export const metadata = {
   title: `${siteName} | Watch Bollywood Movies Online For Free`,
   description,
+  keywords: [
+    'watch Bollywood movies online for free',
+    'watch Bollywood movies free',
+    'movie watch online',
+    'watch online Bollywood movie free websites',
+    'streaming Bollywood movies',
+    'free movie streaming',
+  ],
+  robots: 'index, follow',
+  viewport: 'width=device-width, initial-scale=1',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  openGraph: {
+    type: 'website',
+    url: siteURL,
+    title: `${siteName} | Watch Free Bollywood Movies Online`,
+    description,
+    images: [
+      {
+        url: `${siteURL}/images/og-image.jpg`,
+        width: 800,
+        height: 600,
+        alt: `${siteName} - Watch Bollywood Movies Online For Free`,
+      },
+    ],
+    siteName: siteName,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@flicknest',
+    title: `${siteName} | Watch Bollywood Movies Online For Free`,
+    description,
+    images: [`${siteURL}/images/og-image.jpg`],
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
