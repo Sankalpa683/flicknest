@@ -249,28 +249,5 @@
     ],
     "director": "Ashutosh Gowariker",
     "movie_poster_img": "https://m.media-amazon.com/images/M/MV5BZWJlNmQ2NmQtM2U3Yi00MTZjLWI1YzktY2I2MmExMzgwNmE3XkEyXkFqcGc@._V1_.jpg"
-  },
-  {
-    "id": 12,
-    "slug": "taare-zameen-par",
-    "title": "Taare Zameen Par",
-    "year": 2007,
-    "language": "Hindi",
-    "duration": 165,
-    "rating": 8.4,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1i3",
-    "movie_description": "Taare Zameen Par is a touching narrative about a dyslexic child who struggles to find his place in a world that overlooks his unique talents, ultimately finding inspiration through a compassionate teacher.",
-    "meta_description": "Taare Zameen Par, directed by Aamir Khan, is a poignant film that highlights the challenges faced by children with learning disabilities. Through its moving storyline and memorable performances, the film advocates for understanding and nurturing individuality in education, making it an emotional journey for viewers of all ages.",
-    "description": "Drama",
-    "genres": [
-      "Drama",
-      "Family"
-    ],
-    "actors": [
-      "Aamir Khan",
-      "Darsheel Safary"
-    ],
-    "director": "Aamir Khan",
-    "movie_poster_img": "https://upload.wikimedia.org/wikipedia/en/b/b4/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png"
   }
 ]
