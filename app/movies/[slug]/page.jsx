@@ -139,7 +139,7 @@ export default async function MoviePage({ params }) {
               ></iframe>
             </div>
             <div className="my-5 text-[#171717] bg-white space-y-2">
-              <h1 className="text-2xl text-[#171717] font-bold">{movie.title}</h1>
+              <h1 className="text-2xl text-[#171717] font-bold">{movie.title} - (${movie.year})</h1>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <span>{movie.year}</span>
                 <span>•</span>
