@@ -35,6 +35,13 @@ export async function generateMetadata({ params }) {
     "HD Bollywood movies",
     "Bollywood movie streaming",
     "watch Bollywood movies online for free",
+    `${movie.title} full movie`,
+    `watch ${movie.title} online`,
+    `free ${movie.title} streaming`,
+    movie.year,
+    movie.language,
+    ...movie.genres,
+    "watch Bollywood movies online for free",
   ].join(", ");
 
   return {
@@ -136,6 +143,7 @@ export default async function MoviePage({ params }) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
+                title={`Watch ${movie.title} Full Movie Online`}
               ></iframe>
             </div>
             <div className="my-5 text-[#171717] bg-white space-y-2">
