@@ -23,7 +23,7 @@ const MoviesPage = () => {
         const fetchMovies = async () => {
             try {
                 // Replace with your actual API URL
-                const response = await axios.get('/movies.json'); // Update with your actual API endpoint
+                const response = await axios.get('https://www.bollycinemahub.in/movies.json'); // Update with your actual API endpoint
                 setMovies(response.data); // Assuming the API returns an array of movies
             } catch (error) {
                 console.error('Error fetching movies:', error);
