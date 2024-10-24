@@ -37,11 +37,11 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `Watch ${movie.title} (${movie.year}) - Full Movie Online for Free | Bolly Cinema Hub`,
-    description: `${movie.movie_description}. Watch ${movie.title} for free in HD. Stream now on Bolly Cinema Hub!`,
+    description: `${movie.meta_description}. Watch ${movie.title} for free in HD. Stream now on Bolly Cinema Hub!`,
     keywords,
     openGraph: {
       title: `Watch ${movie.title} (${movie.year}) - Full Movie Online for Free | Bolly Cinema Hub`,
-      description: movie.movie_description,
+      description: movie.meta_description,
       url: `https://www.bollycinemahub.in/movies/${slug}`,
       images: [
         {
@@ -54,14 +54,14 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: `Watch ${movie.title}`,
-      description: movie.movie_description,
+      description: movie.meta_description,
       images: [movie.movie_poster_img],
     },
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Movie",
       name: movie.title,
-      description: movie.movie_description,
+      description: movie.meta_description,
       image: movie.movie_poster_img,
       director: {
         "@type": "Person",
@@ -82,7 +82,7 @@ export async function generateMetadata({ params }) {
       video: {
         "@type": "VideoObject",
         name: movie.title,
-        description: movie.movie_description,
+        description: movie.meta_description,
         thumbnailUrl: movie.movie_poster_img,
         uploadDate: new Date().toISOString(), // You can adjust this
         duration: `PT${movie.duration}M`,
