@@ -23,7 +23,7 @@ const MoviesPage = () => {
         const fetchMovies = async () => {
             try {
                 // Replace with your actual API URL
-                const response = await axios.get('https://www.bollycinemahub.in/movies.json'); // Update with your actual API endpoint
+                const response = await axios.get('https://bollycinemahub.in/movies.json'); // Update with your actual API endpoint
                 setMovies(response.data); // Assuming the API returns an array of movies
             } catch (error) {
                 console.error('Error fetching movies:', error);
@@ -74,24 +74,6 @@ const MoviesPage = () => {
                         content: 'index, follow',
                     },
                 ]}
-                // JSON-LD for Organization structured data
-                jsonLd={{
-                    '@context': 'https://schema.org',
-                    '@type': 'Organization',
-                    url: siteURL,
-                    logo: `${siteURL}/images/logo.png`,
-                    name: siteName,
-                    sameAs: [
-                        'https://www.facebook.com/bollycinemahub',
-                        'https://www.instagram.com/bollycinemahub',
-                        'https://www.twitter.com/bollycinemahub',
-                    ],
-                    contactPoint: {
-                        '@type': 'ContactPoint',
-                        telephone: '+1-800-555-5555',
-                        contactType: 'Customer Support',
-                    },
-                }}
             />
             <Navbar active='movies' />
             {loading && <LoadingSpinner />} {/* Show spinner when loading */}
@@ -104,6 +86,9 @@ const MoviesPage = () => {
                             All Bollywood Movies
                         </h2>
                         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
+                            {movies.length === 0 && !loading && (
+                                <p>No movies available at the moment.</p>
+                            )}
                             {movies.map((movie, index) => (
                                 <Link
                                     key={index}
@@ -114,7 +99,7 @@ const MoviesPage = () => {
                                     <div>
                                         <img
                                             src={movie.movie_poster_img}
-                                            alt={`${movie.title} image`}
+                                            alt={`Poster of the movie ${movie.title}`}
                                             className="w-full aspect-square rounded-2xl object-cover"
                                         />
                                     </div>
@@ -125,14 +110,16 @@ const MoviesPage = () => {
                                             </h6>
                                         </div>
                                         <p className="font-normal text-sm leading-6 text-gray-500">
-                                            {movie.genres}
+                                            {movie.genres.join(', ')}
                                         </p>
                                         <p className="font-normal text-sm leading-6 text-gray-500">
                                             {movie.release_year}
                                         </p>
                                     </div>
-                                    <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
-                                        <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
+                                    <div className="hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3 group-hover:flex">
+                                        <Button type="primary">
+                                            <PlayCircleOutlined /> Watch Now
+                                        </Button>
                                     </div>
                                 </Link>
                             ))}
@@ -141,8 +128,8 @@ const MoviesPage = () => {
                 </div>
             </section>
 
-            <br className='block lg:hidden bg-white' />
-            <br className='block lg:hidden bg-white' />
+            <br className="block lg:hidden bg-white" />
+            <br className="block lg:hidden bg-white" />
             <Footer />
         </>
     );
