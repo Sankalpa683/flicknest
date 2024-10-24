@@ -168,6 +168,7 @@ export default function RootLayout({ children }) {
         />
 
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="KlSihWZhJzDiIksOwRjrzQMQGvvDoNTIsY8xkf_akFw" />
       </Head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
