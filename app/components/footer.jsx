@@ -176,7 +176,7 @@ const footer = () => {
         </div>
         <hr />
         <div className='flex flex-col p-4  text-gray-600 flex-wrap justify-center items-center text-center'>
-          <p>Copyright &copy; 2024 FlickNest. Build with ❤️ by Sankalpa Dahal.</p>
+          <p>Copyright &copy; 2024 BollyCinema Hub. Build with ❤️ by Sankalpa Dahal.</p>
         </div>
 
         <br className='block lg:hidden'/>
