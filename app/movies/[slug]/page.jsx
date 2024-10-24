@@ -10,11 +10,106 @@ async function fetchMovieData(slug) {
   return movies.find((movie) => movie.slug === slug);
 }
 
+// Generate dynamic metadata for SEO
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const movie = await fetchMovieData(slug);
+
+  if (!movie) {
+    return {
+      title: "Movie not found",
+      description: "The requested movie does not exist.",
+    };
+  }
+
+  const keywords = [
+    movie.title,
+    movie.year,
+    movie.language,
+    ...movie.genres,
+    "watch online",
+    "full movie",
+    "free streaming",
+    "HD Bollywood movies",
+    "Bollywood movie streaming",
+    "watch Bollywood movies online for free",
+  ].join(", ");
+
+  return {
+    title: `Watch ${movie.title} (${movie.year}) - Full Movie Online for Free | Bolly Cinema Hub`,
+    description: `${movie.movie_description}. Watch ${movie.title} for free in HD. Stream now on Bolly Cinema Hub!`,
+    keywords,
+    openGraph: {
+      title: `Watch ${movie.title} (${movie.year}) - Full Movie Online for Free | Bolly Cinema Hub`,
+      description: movie.movie_description,
+      url: `https://www.bollycinemahub.in/movies/${slug}`,
+      images: [
+        {
+          url: movie.movie_poster_img,
+          alt: `${movie.title} Poster`,
+        },
+      ],
+      type: "video.movie",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Watch ${movie.title}`,
+      description: movie.movie_description,
+      images: [movie.movie_poster_img],
+    },
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Movie",
+      name: movie.title,
+      description: movie.movie_description,
+      image: movie.movie_poster_img,
+      director: {
+        "@type": "Person",
+        name: movie.director,
+      },
+      actor: movie.actors.map((actor) => ({
+        "@type": "Person",
+        name: actor,
+      })),
+      genre: movie.genres,
+      dateCreated: movie.year,
+      duration: `PT${movie.duration}M`,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: movie.rating,
+        reviewCount: 100, // Placeholder; update with actual review count
+      },
+      video: {
+        "@type": "VideoObject",
+        name: movie.title,
+        description: movie.movie_description,
+        thumbnailUrl: movie.movie_poster_img,
+        uploadDate: new Date().toISOString(), // You can adjust this
+        duration: `PT${movie.duration}M`,
+        contentUrl: movie.embedUrl,
+        embedUrl: movie.embedUrl,
+        interactionStatistic: {
+          "@type": "InteractionCounter",
+          interactionType: { "@type": "WatchAction" },
+          userInteractionCount: 1000, // Placeholder for views
+        },
+      },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.bollycinemahub.in/" },
+          { "@type": "ListItem", position: 2, name: "Movies", item: "https://www.bollycinemahub.in/movies" },
+          { "@type": "ListItem", position: 3, name: movie.title, item: `https://www.bollycinemahub.in/movies/${movie.slug}` },
+        ],
+      },
+    },
+  };
+}
+
 export default async function MoviePage({ params }) {
   const { slug } = params;
   const movie = await fetchMovieData(slug);
 
-  // Handle movie not found
   if (!movie) {
     return <div>Movie not found</div>;
   }
