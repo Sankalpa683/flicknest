@@ -86,14 +86,14 @@ export async function generateMetadata({ params }) {
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: movie.rating,
-        reviewCount: 100, // Placeholder; update with actual review count
+        reviewCount: 60, // Placeholder; update with actual review count
       },
       video: {
         "@type": "VideoObject",
         name: movie.title,
         description: movie.meta_description,
         thumbnailUrl: movie.movie_poster_img,
-        uploadDate: new Date().toISOString(), // You can adjust this
+        uploadDate: movie.year, // You can adjust this
         duration: `PT${movie.duration}M`,
         contentUrl: movie.embedUrl,
         embedUrl: movie.embedUrl,
