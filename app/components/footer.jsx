@@ -11,7 +11,7 @@ const footer = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-8 py-10">
             <div className="col-span-full mb-10 2xl:col-span-2 lg:mb-0 flex items-center flex-col 2xl:items-start">
               <div className="flex items-center justify-between w-full max-w-xl mx-auto flex-col 2xl:flex-col 2xl:items-start">
-                <Image src='/logo.png' width={150} height={80} />
+                <Image src='/logo.png' width={190} height={90} />
                 <p className="2xl:py-8 py-4 text-sm text-gray-400 2xl:max-w-xs text-center lg:text-left">
                   Streaming your favorite movies and TV shows worldwide. Questions?
                   We're here to help!
