@@ -2,11 +2,13 @@ import { Button, Card, Badge } from "antd";
 import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled } from "@ant-design/icons";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
+import axios from 'axios';
+
 
 // Fetch movie data dynamically
 async function fetchMovieData(slug) {
-  const response = await fetch(`https://www.bollycinemahub.in/movies.json`);
-  const movies = await response.json();
+  const response = await axios.get('https://www.bollycinemahub.in/movies.json');
+  const movies = response.data;
   return movies.find((movie) => movie.slug === slug);
 }
 
