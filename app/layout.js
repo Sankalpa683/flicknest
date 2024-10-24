@@ -17,20 +17,21 @@ const geistMono = localFont({
 });
 
 // Global SEO metadata configuration
-const siteName = `${siteConfig.name}`;
-const siteURL = `${siteConfig.url}`;
-const description = `${siteConfig.description}`;
+const siteName = siteConfig.name;
+const siteURL = siteConfig.url;
+const description = siteConfig.description;
 
 export const metadata = {
-  title: `${siteName} | Watch Bollywood Movies Online For Free`,
+  title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
   description,
   keywords: [
     'watch Bollywood movies online for free',
-    'watch Bollywood movies free',
-    'movie watch online',
-    'watch online Bollywood movie free websites',
-    'streaming Bollywood movies',
-    'free movie streaming',
+    'best site to watch Bollywood movies for free',
+    'stream free Bollywood movies in HD',
+    'Bollywood movie streaming site',
+    'latest Bollywood blockbusters online',
+    'free online movie streaming without registration',
+    'watch free Hindi movies online',
   ],
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1',
@@ -40,14 +41,14 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: siteURL,
-    title: `${siteName} | Watch Free Bollywood Movies Online`,
+    title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
     description,
     images: [
       {
         url: `${siteURL}/images/og-image.jpg`,
         width: 800,
         height: 600,
-        alt: `${siteName} - Watch Bollywood Movies Online For Free`,
+        alt: `${siteName} - Watch Bollywood Movies Online for Free`,
       },
     ],
     siteName: siteName,
@@ -55,31 +56,30 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@bollycinemahub',
-    title: `${siteName} | Watch Bollywood Movies Online For Free`,
+    title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
     description,
     images: [`${siteURL}/images/og-image.jpg`],
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
         <NextSeo
-          title={`${siteName} | Watch Bollywood Movies Online For Free`}
+          title={`${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`}
           description={description}
           canonical={siteURL}
           openGraph={{
             url: siteURL,
-            title: `${siteName} | Watch Free Bollywood Movies Online`,
+            title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
             description,
             images: [
               {
                 url: `${siteURL}/images/og-image.jpg`,
                 width: 800,
                 height: 600,
-                alt: `${siteName} - Watch Bollywood Movies Online For Free`,
+                alt: `${siteName} - Watch Bollywood Movies Online for Free`,
               },
             ],
             site_name: siteName,
@@ -92,14 +92,13 @@ export default function RootLayout({ children }) {
           additionalMetaTags={[
             {
               name: 'keywords',
-              content: 'watch Bollywood movies online for free, watch Bollywood movies free, movie watch online, watch online Bollywood movie free websites, streaming Bollywood movies, free movie streaming',
+              content: 'watch Bollywood movies online for free, best site to watch Bollywood movies for free, stream free Bollywood movies in HD, Bollywood movie streaming site, latest Bollywood blockbusters online, free online movie streaming without registration, watch free Hindi movies online',
             },
             {
               name: 'robots',
               content: 'index, follow',
             },
           ]}
-          // JSON-LD Structured Data for Website, Organization, and SearchAction
           jsonLd={{
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -118,6 +117,7 @@ export default function RootLayout({ children }) {
             },
           }}
         />
+
         {/* SearchAction Schema */}
         <script
           type="application/ld+json"
@@ -125,10 +125,10 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              'url': siteURL,
-              'potentialAction': {
+              url: siteURL,
+              potentialAction: {
                 '@type': 'SearchAction',
-                'target': `${siteURL}/search/{search_term_string}`,
+                target: `${siteURL}/search/{search_term_string}`,
                 'query-input': 'required name=search_term_string',
               },
             }),
@@ -142,78 +142,53 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
-              'itemListElement': [
-                {
-                  '@type': 'ListItem',
-                  'position': 1,
-                  'name': 'Home',
-                  'item': siteURL,
-                },
-                {
-                  '@type': 'ListItem',
-                  'position': 2,
-                  'name': 'Movies',
-                  'item': `${siteURL}/movies`,
-                },
-                {
-                  '@type': 'ListItem',
-                  'position': 3,
-                  'name': 'Action Movies',
-                  'item': `${siteURL}/category/action`,
-                },
-                {
-                  '@type': 'ListItem',
-                  'position': 3,
-                  'name': 'Comedy Movies',
-                  'item': `${siteURL}/category/comedy`,
-                },
-                {
-                  '@type': 'ListItem',
-                  'position': 3,
-                  'name': 'Drama',
-                  'item': `${siteURL}/category/drama`,
-                },
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: siteURL },
+                { '@type': 'ListItem', position: 2, name: 'Movies', item: `${siteURL}/movies` },
+                { '@type': 'ListItem', position: 3, name: 'Action Movies', item: `${siteURL}/category/action` },
+                { '@type': 'ListItem', position: 4, name: 'Comedy Movies', item: `${siteURL}/category/comedy` },
+                { '@type': 'ListItem', position: 5, name: 'Drama', item: `${siteURL}/category/drama` },
               ],
             }),
           }}
         />
 
         {/* VideoObject Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'VideoObject',
-              'name': 'Watch Bollywood Movies Online',
-              'description': description,
-              'thumbnailUrl': `${siteURL}/images/og-image.jpg`,
-              'uploadDate': '2024-01-01T08:00:00+08:00',
-              'duration': 'PT2H30M', // Example duration
-              'contentUrl': `${siteURL}/movie-url`,
-              'embedUrl': `${siteURL}/embed/movie-url`,
-              'publisher': {
-                '@type': 'Organization',
-                'name': siteName,
-                'logo': {
-                  '@type': 'ImageObject',
-                  'url': `${siteURL}/logo.png`,
-                },
-              },
-            }),
-          }}
-        />
+        // <script
+        //   type="application/ld+json"
+        //   dangerouslySetInnerHTML={{
+        //     __html: JSON.stringify({
+        //       '@context': 'https://schema.org',
+        //       '@type': 'VideoObject',
+        //       name: 'Watch Bollywood Movies Online',
+        //       description: description,
+        //       thumbnailUrl: `${siteURL}/images/og-image.jpg`,
+        //       uploadDate: '2024-01-01T08:00:00+08:00',
+        //       duration: 'PT2H30M',
+        //       contentUrl: `${siteURL}/movie-url`,
+        //       embedUrl: `${siteURL}/embed/movie-url`,
+        //       publisher: {
+        //         '@type': 'Organization',
+        //         name: siteName,
+        //         logo: {
+        //           '@type': 'ImageObject',
+        //           url: `${siteURL}/logo.png`,
+        //         },
+        //       },
+        //     }),
+        //   }}
+        // />
 
-        {/* WebPage Schema for enhancing general page understanding */}
+        {/* WebPage Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              'name': `${siteName} | Watch Bollywood Movies Online`,
-              'description': description,
-              'url': siteURL,
+              name: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+              description: description,
+              url: siteURL,
             }),
           }}
         />
