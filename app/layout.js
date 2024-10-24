@@ -153,32 +153,6 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* VideoObject Schema */}
-        // <script
-        //   type="application/ld+json"
-        //   dangerouslySetInnerHTML={{
-        //     __html: JSON.stringify({
-        //       '@context': 'https://schema.org',
-        //       '@type': 'VideoObject',
-        //       name: 'Watch Bollywood Movies Online',
-        //       description: description,
-        //       thumbnailUrl: `${siteURL}/images/og-image.jpg`,
-        //       uploadDate: '2024-01-01T08:00:00+08:00',
-        //       duration: 'PT2H30M',
-        //       contentUrl: `${siteURL}/movie-url`,
-        //       embedUrl: `${siteURL}/embed/movie-url`,
-        //       publisher: {
-        //         '@type': 'Organization',
-        //         name: siteName,
-        //         logo: {
-        //           '@type': 'ImageObject',
-        //           url: `${siteURL}/logo.png`,
-        //         },
-        //       },
-        //     }),
-        //   }}
-        // />
-
         {/* WebPage Schema */}
         <script
           type="application/ld+json"
