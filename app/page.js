@@ -1,5 +1,7 @@
 import React from 'react'
 import { siteConfig } from './config/siteConfig'
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Navbar from './components/navbar'
 import Hero from './components/hero'
 import Cult_classic from './components/moviecard/cult_classic'
