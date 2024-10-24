@@ -15,16 +15,16 @@ const siteURL = `${siteConfig.url}`;
 const description = `${siteConfig.description}`;
 
 export const metadata = {
-  title: `${siteName} | Watch Bollywood Movies Online for Free`,
-  description: `Welcome to ${siteName}, your ultimate destination to watch Bollywood movies online for free! Discover the latest releases, classics, and hidden gems from the vibrant world of Bollywood cinema.`,
+  title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+  description,
   keywords: [
-    'Bollywood movies online',
-    'watch Bollywood movies for free',
-    'free Bollywood movie streaming',
-    'latest Bollywood movies',
-    'watch online Bollywood movies',
-    'Bollywood cinema',
-    'Bollywood films online'
+    'watch Bollywood movies online for free',
+    'best site to watch Bollywood movies for free',
+    'stream free Bollywood movies in HD',
+    'Bollywood movie streaming site',
+    'latest Bollywood blockbusters online',
+    'free online movie streaming without registration',
+    'watch free Hindi movies online',
   ],
   robots: 'index, follow',
   viewport: 'width=device-width, initial-scale=1',
@@ -34,8 +34,8 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: siteURL,
-    title: `${siteName} | Watch Free Bollywood Movies Online`,
-    description: `Enjoy a vast collection of Bollywood movies at ${siteName}. Watch the latest blockbusters and timeless classics for free!`,
+    title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+    description,
     images: [
       {
         url: `${siteURL}/images/og-image.jpg`,
@@ -48,19 +48,10 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@flicknest',
-    title: `${siteName} | Watch Bollywood Movies Online for Free`,
-    description: `Explore Bollywood movies on ${siteName}. Stream for free and enjoy endless entertainment!`,
+    site: '@bollycinemahub',
+    title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+    description,
     images: [`${siteURL}/images/og-image.jpg`],
-  },
-  // JSON-LD Schema Markup
-  jsonLd: {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteName,
-    url: siteURL,
-    description: `A comprehensive platform to watch Bollywood movies online for free. Enjoy the latest releases, classic hits, and discover hidden gems.`,
-    sameAs: ['https://www.facebook.com/yourpage', 'https://twitter.com/yourpage', 'https://www.instagram.com/yourpage'],
   },
 };
 
