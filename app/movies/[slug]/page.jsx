@@ -3,38 +3,22 @@ import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled } from "@ant-d
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 
-// Generate static paths for SEO
-export async function getStaticPaths() {
-  // Fetch the data from public/movies.json
-  const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/movies.json`); // Fetch from public directory
+// Fetch movie data dynamically
+async function fetchMovieData(slug) {
+  const response = await fetch(`https://www.bollycinemahub.in/movies.json`);
   const movies = await response.json();
-
-  const paths = movies.map((movie) => ({
-    params: { slug: movie.slug },
-  }));
-
-  return { paths, fallback: false };
+  return movies.find((movie) => movie.slug === slug);
 }
 
-// Fetch movie data and render the page
-export async function getStaticProps({ params }) {
-  // Fetch the data from public/movies.json
-  const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/movies.json`);
-  const movies = await response.json();
+export default async function MoviePage({ params }) {
+  const { slug } = params;
+  const movie = await fetchMovieData(slug);
 
-  const movie = movies.find((movie) => movie.slug === params.slug);
-
-  // Handle not found movie
+  // Handle movie not found
   if (!movie) {
-    return { notFound: true };
+    return <div>Movie not found</div>;
   }
 
-  return {
-    props: { movie },
-  };
-}
-
-const MoviePage = ({ movie }) => {
   // Related movies for recommendations
   const relatedMovies = [
     { name: "Kuch Kuch Hota Hai", image: "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg" },
@@ -123,6 +107,4 @@ const MoviePage = ({ movie }) => {
       <Footer />
     </>
   );
-};
-
-export default MoviePage;
+}
