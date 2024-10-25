@@ -191,55 +191,7 @@ const Movies = ({ params }) => {
             {loading && <LoadingSpinner />} {/* Show spinner when loading */}
 
             {/* Movies List */}
-            <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
-                <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2 pb-5">
-                    <div className=''>
-                        <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                            All Bollywood Movies
-                        </h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
-                            {movies.slice(0, visibleMovies).map((movie, index) => {
-                                return (
-                                    <Link key={index} href={`/movies/${movie.slug}`} onClick={handleLinkClick} className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
-                                        <div className="">
-                                            <img
-                                                src={movie.movie_poster_img}
-                                                alt={`${movie.title} poster`}
-                                                className="w-full aspect-square rounded-2xl object-cover"
-                                            />
-                                        </div>
-                                        <div className="mt-5">
-                                            <div className="flex items-center justify-between">
-                                                <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
-                                                    {movie.title}
-                                                </h6>
-                                            </div>
-                                            <p className="font-normal text-sm leading-6 text-gray-500">
-                                                {movie.genres.join(', ')}
-                                            </p>
-                                            <p className="font-normal text-sm leading-6 text-gray-500">
-                                                {movie.year}
-                                            </p>
-                                        </div>
-                                        <div className='hidden gap-1 flex-wrap justify-center lg:justify-start items-center lg:items-start mt-3'>
-                                            <Button type="primary"><PlayCircleOutlined /> Watch Now</Button>
-                                        </div>
-                                    </Link>
-                                );
-                            })}
-                        </div>
-
-                        {/* Load More Button */}
-                        {visibleMovies < movies.length && (
-                            <div className="flex justify-center mt-8">
-                                <Button type="primary" onClick={loadMoreMovies} loading={loading}>
-                                    Load More
-                                </Button>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </section>
+            <h1>Helloworld</h1>
 
             <br className='block lg:hidden bg-white' />
             <br className='block lg:hidden bg-white' />
