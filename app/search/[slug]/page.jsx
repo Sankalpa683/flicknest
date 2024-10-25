@@ -24,7 +24,7 @@ const Search = () => {
 
     const fetchMovies = async () => {
         try {
-            const response = await axios.get('/movies.json');
+            const response = await axios.get('https://www.bollycinemahub.in/movies.json');
 
             // Format both the movie titles and slug to use `+` for spaces
             const filteredMovies = response.data.filter((movie) =>
