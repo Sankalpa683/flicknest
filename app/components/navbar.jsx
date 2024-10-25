@@ -19,7 +19,8 @@ const Navbar = ({ active }) => {
     const onSearch = async (value) => {
         if (value.trim()) {
             setLoading(true); // Set loading to true when search starts
-            await router.push(`/search/${value.trim()}`);
+            const formattedValue = value.trim().toLowerCase().replace(/\s+/g, '-');
+            await router.push(`/search/${formattedValue}`);
         }
     };
 
