@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button } from 'antd';
 import { PlayCircleOutlined } from '@ant-design/icons';
-import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { siteConfig } from '@/app/config/siteConfig';
 import LoadingSpinner from '@/app/components/LoadingSpinner';
@@ -37,34 +36,6 @@ const Movies = () => {
 
     return (
         <>
-            <NextSeo
-                title={`${siteConfig.name} | Watch Bollywood Movies Online For Free`}
-                description={siteConfig.description}
-                canonical={`${siteConfig.url}/movies`}
-                openGraph={{
-                    url: `${siteConfig.url}/movies`,
-                    title: `${siteConfig.name} | Watch Bollywood Movies Online For Free`,
-                    description: siteConfig.description,
-                    images: [
-                        {
-                            url: `${siteConfig.url}/images/og-image.jpg`,
-                            width: 800,
-                            height: 600,
-                            alt: `${siteConfig.name} - Watch Bollywood Movies Online For Free`,
-                        },
-                    ],
-                    site_name: siteConfig.name,
-                }}
-                twitter={{
-                    handle: '@bollycinemahub',
-                    site: '@bollycinemahub',
-                    cardType: 'summary_large_image',
-                }}
-                additionalMetaTags={[
-                    { name: 'keywords', content: 'search Bollywood movies, online streaming, watch movies free' },
-                    { name: 'robots', content: 'index, follow' },
-                ]}
-            />
 
             <Navbar active="movies" />
             {loading && <LoadingSpinner />}
