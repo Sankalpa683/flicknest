@@ -39,56 +39,7 @@ const Search = () => {
             fetchMovies();
         }
     }, [slug]);
-
-    const searchTerm = params.slug || '';
-
-    <NextSeo
-        title={`${siteName} | Search Results`}
-        description={description}
-        canonical={`${siteURL}/search/${searchTerm}`}
-        openGraph={{
-            url: `${siteURL}/search/${searchTerm}`,
-            title: `${siteName} | Search Results`,
-            description,
-            images: [
-                {
-                    url: `${siteURL}/images/og-image.jpg`,
-                    width: 800,
-                    height: 600,
-                    alt: `${siteName} - Search Results`,
-                },
-            ],
-            site_name: siteName,
-        }}
-        twitter={{
-            handle: '@bollycinemahub',
-            site: '@bollycinemahub',
-            cardType: 'summary_large_image',
-        }}
-        additionalMetaTags={[
-            {
-                name: 'keywords',
-                content: 'search Bollywood movies, online streaming, watch movies free',
-            },
-            {
-                name: 'robots',
-                content: 'index, follow',
-            },
-        ]}
-        jsonLd={{
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: `${siteName} | Search Results`,
-            description,
-            url: `${siteURL}/search/${searchTerm}`,
-            potentialAction: {
-                '@type': 'SearchAction',
-                target: `${siteURL}/search/{search_term_string}`,
-                queryinput: 'required name=search_term_string',
-            },
-        }}
-    />
-
+    
     return (
         <>
             <Navbar active="movies" />
