@@ -45,18 +45,18 @@ const footer = () => {
                 </li>
                 <li className="mb-6">
                   <Link
-                    href="/tv-shows"
-                    className="text-gray-400 text-sm font-normal hover:text-black"
-                  >
-                    TV Shows
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/web-series"
                     className="text-gray-400 text-sm font-normal hover:text-black"
                   >
                     Web series
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/bookmarks"
+                    className="text-gray-400 text-sm font-normal hover:text-black"
+                  >
+                    Bookmarks
                   </Link>
                 </li>
               </ul>
@@ -90,10 +90,10 @@ const footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/category/cult-classic"
+                    href="/category/romance"
                     className="text-gray-400 text-sm font-normal hover:text-black"
                   >
-                    Cult Classic
+                    Romance
                   </Link>
                 </li>
               </ul>
@@ -176,13 +176,13 @@ const footer = () => {
         </div>
         <hr />
         <div className='flex flex-col p-4  text-gray-600 flex-wrap justify-center items-center text-center'>
-          <p>Copyright &copy; 2024 BollyCinema Hub.</p>
+          <p>Copyright &copy; 2024 BollyCinema Hub</p>
         </div>
 
-        <br className='block lg:hidden'/>
-        <br className='block lg:hidden'/>
+        <br className='block lg:hidden' />
+        <br className='block lg:hidden' />
 
-        
+
       </footer>
 
 
