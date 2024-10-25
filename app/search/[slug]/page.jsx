@@ -11,20 +11,24 @@ import LoadingSpinner from '@/app/components/LoadingSpinner';
 import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
 
-const siteName = `${siteConfig.name}`;
-const siteURL = `${siteConfig.url}`;
-const description = `${siteConfig.description}`;
 
 const Search = () => {
     const { slug } = useParams();
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // Helper function to convert spaces to `+` in movie titles for comparison
+    const formatMovieTitle = (title) => {
+        return title.toLowerCase().replace(/\s+/g, '+');
+    };
+
     const fetchMovies = async () => {
         try {
-            const response = await axios.get('/movies.json');
+            const response = await axios.get('https://bollycinemahub.in/movies.json');
+
+            // Format both the movie titles and slug to use `+` for spaces
             const filteredMovies = response.data.filter((movie) =>
-                movie.title.toLowerCase().includes(slug.toLowerCase())
+                formatMovieTitle(movie.slug).includes(slug.toLowerCase())
             );
             setMovies(filteredMovies);
         } catch (error) {
@@ -39,7 +43,7 @@ const Search = () => {
             fetchMovies();
         }
     }, [slug]);
-    
+
     return (
         <>
             <Navbar active="movies" />
@@ -56,7 +60,7 @@ const Search = () => {
                         {movies.length > 0 ? (
                             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                                 {movies.map((movie, index) => (
-                                    <Link key={index} href={`/movies/${movie.slug}`} className="group cursor-pointer transition-all duration-500">
+                                    <Link key={index} href={`/movies/${formatMovieTitle(movie.slug)}`} className="group cursor-pointer transition-all duration-500">
                                         <div className="mx-auto sm:mr-0 lg:mx-auto bg-white">
                                             <img
                                                 src={movie.movie_poster_img}
