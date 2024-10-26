@@ -1,9 +1,9 @@
 import { Button, Card, Badge } from "antd";
-import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled } from "@ant-design/icons";
+import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled, HomeOutlined } from "@ant-design/icons";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import axios from 'axios';
-
+import Link from "next/link";
 
 // Fetch movie data dynamically
 async function fetchMovieData(slug) {
@@ -120,7 +120,28 @@ export default async function MoviePage({ params }) {
   const movie = await fetchMovieData(slug);
 
   if (!movie) {
-    return <div>Movie not found</div>;
+    return (
+      <>
+        <Navbar />
+        <div className="flex flex-col items-center justify-center w-full mx-auto p-4 bg-white">
+          <div className="text-center">
+            <h1 className="text-[120px] font-extrabold text-indigo-600">
+              404
+            </h1>
+            <p className="text-2xl font-semibold text-gray-800 mb-2">No movies found</p>
+            <p className="text-md text-gray-500 mb-4">
+              Oops! We couldn't find any movies.
+            </p>
+            <Link href="/" passHref>
+              <Button type="primary" icon={<HomeOutlined />}>
+                Go Home
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <Footer />
+      </>
+    )
   }
 
   // Related movies for recommendations

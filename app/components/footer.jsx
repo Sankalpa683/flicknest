@@ -74,10 +74,10 @@ const footer = () => {
                 </li>
                 <li className="mb-6">
                   <Link
-                    href="/category/comedy"
+                    href="/category/horror"
                     className="text-gray-400 text-sm font-normal hover:text-black"
                   >
-                    Comedy
+                    Horror
                   </Link>
                 </li>
                 <li className="mb-6">
