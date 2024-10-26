@@ -166,6 +166,8 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8549676155360581"
+          crossorigin="anonymous"></script>
 
         <link rel="icon" href="/favicon.ico" />
         <meta name="google-site-verification" content="KlSihWZhJzDiIksOwRjrzQMQGvvDoNTIsY8xkf_akFw" />
