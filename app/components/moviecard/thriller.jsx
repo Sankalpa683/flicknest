@@ -73,7 +73,7 @@ const Thriller = () => {
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Thriller
                             </h2>
-                            <Link href='/category/recommendations' onClick={handleLinkClick}>
+                            <Link href='/category/thriller' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
                             </Link>
                         </div>
