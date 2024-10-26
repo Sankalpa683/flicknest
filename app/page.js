@@ -4,9 +4,9 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 import Navbar from './components/navbar'
 import Hero from './components/hero'
-import Cult_classic from './components/moviecard/cult_classic'
-import Recommendations from './components/moviecard/recommendation'
-import Comedy from './components/moviecard/comedy'
+import Horror from './components/moviecard/horror'
+import Thriller from './components/moviecard/thriller'
+import Romance from './components/moviecard/romance'
 import Action from './components/moviecard/action'
 import Drama from './components/moviecard/drama'
 import Footer from './components/footer'
@@ -219,11 +219,14 @@ const page = () => {
       <Navbar active='home' />
       <Hero />
       <main className='mb-10 bg-white'>
-        <Cult_classic />
-        <Recommendations />
-        <Comedy />
         <Action />
+        <Romance />
+        <br />
+        <Thriller />
+        <br />
         <Drama />
+        <br />
+        <Horror />
       </main>
       <Footer />
     </>

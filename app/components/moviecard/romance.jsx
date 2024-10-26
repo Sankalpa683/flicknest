@@ -53,7 +53,7 @@ const movies = [
     },
 ];
 
-const Comedy = () => {
+const Romance = () => {
 
     const [loading, setLoading] = useState(false); // State to manage loading
 
@@ -69,14 +69,14 @@ const Comedy = () => {
     return (
         <>
             {loading && <LoadingSpinner />} {/* Show spinner when loading */}
-            <section className="py-16">
+            <section className="">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
                         <div className='flex flex-wrap justify-between'>
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                                Comedy
+                                Romance
                             </h2>
-                            <Link href='/category/comedy' onClick={handleLinkClick}>
+                            <Link href='/category/romance' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
                             </Link>
                         </div>
@@ -99,4 +99,4 @@ const Comedy = () => {
     );
 };
 
-export default Comedy;
+export default Romance;

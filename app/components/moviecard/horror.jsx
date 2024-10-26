@@ -11,49 +11,49 @@ import LoadingSpinner from '../LoadingSpinner';
 const movies = [
     {
         id: '01',
-        title: 'Sholay',
-        release_year: '1975',
+        title: 'Maharaja',
+        release_year: '2024',
         description: 'Action & Adventure',
-        img: 'https://m.media-amazon.com/images/I/61NhAcNBC+L._AC_UF894,1000_QL80_.jpg',
+        img: 'https://preview.redd.it/watched-maharaja-such-a-fantastic-screenplay-after-long-v0-ovmi808v77cd1.jpeg?auto=webp&s=004a4d77ec07ecadcb389b3b6298e68f83c38d3d',
     },
     {
         id: '02',
-        title: 'Dilwale Dulhania Le Jayenge',
-        release_year: '1995',
+        title: 'Paa',
+        release_year: '2009',
         description: 'Romance',
-        img: 'https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg',
+        img: 'https://m.media-amazon.com/images/M/MV5BMDIzNWI1YTUtZmFjNy00ZjZhLTk1ZDItOTU3YjNhZWUxMjJhXkEyXkFqcGc@._V1_.jpg',
     },
     {
         id: '03',
-        title: '3 Idiots',
-        release_year: '2009',
+        title: 'Tumbbad',
+        release_year: '2018',
         description: 'Comedy & Drama',
-        img: 'https://i.pinimg.com/550x/58/58/5d/58585d6284adf70525240fba5f4c5ff8.jpg',
+        img: 'https://image.tmdb.org/t/p/original/z1xOCxw780WFJC5uCTMfCkQ4Agi.jpg',
     },
     {
         id: '04',
-        title: 'Ek Tha Tiger',
-        release_year: '2012',
+        title: 'Ratsasan',
+        release_year: '2018',
         description: 'Drama',
-        img: 'https://pbs.twimg.com/media/ET5NuUoUUAAjuGm.jpg',
+        img: 'https://upload.wikimedia.org/wikipedia/en/7/77/Ratsasan_poster.jpg',
     },
     {
         id: '05',
-        title: 'Lagaan',
-        release_year: '2001',
+        title: 'Swadesh',
+        release_year: '2004',
         description: 'Historical Drama',
-        img: 'https://www.tallengestore.com/cdn/shop/products/7381744713908A_12c0d02b-1017-4503-919b-f0f4a503b387.jpg?v=1683929384',
+        img: 'https://m.media-amazon.com/images/M/MV5BZWJlNmQ2NmQtM2U3Yi00MTZjLWI1YzktY2I2MmExMzgwNmE3XkEyXkFqcGc@._V1_.jpg',
     },
     {
         id: '06',
-        title: 'Chak De! India',
+        title: 'Taare Zameen Par',
         release_year: '2007',
         description: 'Sports Drama',
-        img: 'https://m.media-amazon.com/images/M/MV5BMTM2MjgyNDE5Nl5BMl5BanBnXkFtZTcwMzM1MDc4MQ@@._V1_.jpg',
+        img: 'https://upload.wikimedia.org/wikipedia/en/b/b4/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png',
     },
 ];
 
-const cult_classic = () => {
+const Horror = () => {
 
     const [loading, setLoading] = useState(false); // State to manage loading
 
@@ -69,12 +69,12 @@ const cult_classic = () => {
     return (
         <>
             {loading && <LoadingSpinner />} {/* Show spinner when loading */}
-            <section className="py-16">
+            <section className="">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className=''>
                         <div className='flex flex-wrap justify-between'>
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                                Cult Classic
+                                Horror
                             </h2>
                             <Link href='/category/cult_classic' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
@@ -99,4 +99,4 @@ const cult_classic = () => {
     );
 };
 
-export default cult_classic;
+export default Horror;

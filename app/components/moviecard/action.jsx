@@ -66,7 +66,7 @@ const Action = () => {
     return (
         <>
             {loading && <LoadingSpinner />} {/* Show spinner when loading */}
-            <section className="">
+            <section className="py-16 ">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className="">
                         <div className='flex flex-wrap justify-between'>

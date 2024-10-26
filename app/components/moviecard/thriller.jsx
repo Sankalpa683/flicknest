@@ -52,7 +52,7 @@ const movies = [
     },
 ];
 
-const Recommendations = () => {
+const Thriller = () => {
     const [loading, setLoading] = useState(false); // State to manage loading
 
     const generateSlug = (title, id) => {
@@ -66,12 +66,12 @@ const Recommendations = () => {
     return (
         <>
             {loading && <LoadingSpinner />} {/* Show spinner when loading */}
-            <section className="">
+            <section className="pb-6">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
                     <div className="">
                         <div className='flex flex-wrap justify-between'>
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
-                                Recommendations
+                                Thriller
                             </h2>
                             <Link href='/category/recommendations' onClick={handleLinkClick}>
                                 <p className='text-blue-700 cursor-pointer'>See all</p>
@@ -97,7 +97,7 @@ const Recommendations = () => {
     );
 };
 
-export default Recommendations;
+export default Thriller;
 
 {/* <div className="">
                                             <img
