@@ -99,26 +99,39 @@ export default function RootLayout({ children }) {
               content: 'index, follow',
             },
           ]}
-          jsonLd={{
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            url: siteURL,
-            logo: `${siteURL}/logo.png`,
-            name: siteName,
-            sameAs: [
-              'https://www.facebook.com/bollycinemahub',
-              'https://www.instagram.com/bollycinemahub',
-              'https://www.twitter.com/bollycinemahub',
-            ],
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+1-800-555-5555',
-              contactType: 'Customer Support',
-            },
+        />
+
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="KlSihWZhJzDiIksOwRjrzQMQGvvDoNTIsY8xkf_akFw" />
+        <meta name="google-adsense-account" content="ca-pub-8549676155360581" />
+      </Head>
+
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* JSON-LD Schema for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: siteName,
+              url: siteURL,
+              logo: `${siteURL}/logo.png`,
+              sameAs: [
+                'https://www.facebook.com/bollycinemahub',
+                'https://www.instagram.com/bollycinemahub',
+                'https://www.twitter.com/bollycinemahub',
+              ],
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+1-800-555-5555',
+                contactType: 'Customer Support',
+              },
+            }),
           }}
         />
 
-        {/* SearchAction Schema */}
+        {/* JSON-LD for SearchAction Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -135,7 +148,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        {/* BreadcrumbList Schema */}
+        {/* JSON-LD for BreadcrumbList Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -147,13 +160,14 @@ export default function RootLayout({ children }) {
                 { '@type': 'ListItem', position: 2, name: 'Movies', item: `${siteURL}/movies` },
                 { '@type': 'ListItem', position: 3, name: 'Action Movies', item: `${siteURL}/category/action` },
                 { '@type': 'ListItem', position: 4, name: 'Comedy Movies', item: `${siteURL}/category/comedy` },
-                { '@type': 'ListItem', position: 5, name: 'Drama', item: `${siteURL}/category/drama` },
+                { '@type': 'ListItem', position: 5, name: 'Romantic Movies', item: `${siteURL}/category/romance` },
+                { '@type': 'ListItem', position: 6, name: 'Horror Movies', item: `${siteURL}/category/horror` },
               ],
             }),
           }}
         />
 
-        {/* WebPage Schema */}
+        {/* JSON-LD for WebPage Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -166,15 +180,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8549676155360581"
-          crossorigin="anonymous"></script>
 
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="google-site-verification" content="KlSihWZhJzDiIksOwRjrzQMQGvvDoNTIsY8xkf_akFw" />
-        <meta name="google-adsense-account" content="ca-pub-8549676155360581"></meta>
-      </Head>
-
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
