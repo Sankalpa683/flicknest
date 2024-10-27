@@ -180,6 +180,21 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+<<<<<<< HEAD
+=======
+        
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8549676155360581"
+             crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8549676155360581"
+             data-ad-slot="6318032388"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+>>>>>>> d3e5f6266ed927b977e38799c1591a2972a08e77
 
         {children}
       </body>
