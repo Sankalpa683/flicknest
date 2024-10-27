@@ -2,17 +2,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Button } from 'antd';
-import { PlayCircleOutlined } from '@ant-design/icons';
 import Link from 'next/link';
-import { siteConfig } from '@/app/config/siteConfig';
+import { useRouter } from 'next/navigation';
 import LoadingSpinner from '@/app/components/LoadingSpinner';
 import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
 
 const Movies = () => {
     const [loading, setLoading] = useState(true);
+    const [isLinkLoading, setIsLinkLoading] = useState(false);
     const [movies, setMovies] = useState([]);
     const [visibleMovies, setVisibleMovies] = useState(12);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -34,11 +35,15 @@ const Movies = () => {
         }, 500);
     };
 
+    const handleLinkClick = (slug) => {
+        setIsLinkLoading(true);
+        router.push(`/movies/${slug}`);
+    };
+
     return (
         <>
-
             <Navbar active="movies" />
-            {loading && <LoadingSpinner />}
+            {(loading || isLinkLoading) && <LoadingSpinner />}
 
             <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
                 <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2 pb-5">
@@ -47,8 +52,16 @@ const Movies = () => {
                     </h2>
                     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                         {movies.slice(0, visibleMovies).map((movie, index) => (
-                            <Link key={index} href={`/movies/${movie.slug}`} className="group cursor-pointer bg-white transition-all duration-500">
-                                <img src={movie.movie_poster_img} alt={`${movie.title} poster`} className="w-full aspect-square rounded-2xl object-cover" />
+                            <div
+                                key={index}
+                                onClick={() => handleLinkClick(movie.slug)}
+                                className="group cursor-pointer bg-white transition-all duration-500"
+                            >
+                                <img
+                                    src={movie.movie_poster_img}
+                                    alt={`${movie.title} poster`}
+                                    className="w-full aspect-square rounded-2xl object-cover"
+                                />
                                 <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600 mt-5">
                                     {movie.title}
                                 </h6>
@@ -58,7 +71,7 @@ const Movies = () => {
                                 <p className="font-normal text-sm leading-6 text-gray-500">
                                     {movie.year}
                                 </p>
-                            </Link>
+                            </div>
                         ))}
                     </div>
 

@@ -3,19 +3,18 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Button } from 'antd';
 import { PlayCircleOutlined, HomeOutlined } from '@ant-design/icons';
-import { NextSeo } from 'next-seo';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
-import { siteConfig } from '@/app/config/siteConfig';
+import { useParams, useRouter } from 'next/navigation';
 import LoadingSpinner from '@/app/components/LoadingSpinner';
 import Navbar from '@/app/components/navbar';
 import Footer from '@/app/components/footer';
-
 
 const Search = () => {
     const { slug } = useParams();
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [isLinkLoading, setIsLinkLoading] = useState(false);
+    const router = useRouter();
 
     // Helper function to convert spaces to `+` in movie titles for comparison
     const formatMovieTitle = (title) => {
@@ -25,8 +24,6 @@ const Search = () => {
     const fetchMovies = async () => {
         try {
             const response = await axios.get('https://www.bollycinemahub.in/movies.json');
-
-            // Format both the movie titles and slug to use `+` for spaces
             const filteredMovies = response.data.filter((movie) =>
                 formatMovieTitle(movie.slug).includes(slug.toLowerCase())
             );
@@ -44,23 +41,30 @@ const Search = () => {
         }
     }, [slug]);
 
+    const handleLinkClick = (movieSlug) => {
+        setIsLinkLoading(true);
+        router.push(`/movies/${formatMovieTitle(movieSlug)}`);
+    };
+
     return (
         <>
             <Navbar active="movies" />
-            {loading ? <LoadingSpinner /> : (
+            {(loading || isLinkLoading) ? <LoadingSpinner /> : (
                 <section className="py-6 sm:py-6 md:py-8 lg:py-12 bg-white">
                     <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-2">
-
                         {movies.length > 0 && (
                             <h2 className="font-manrope font-semibold text-2xl text-black mb-8 max-lg:text-center">
                                 Search Results
                             </h2>
                         )}
-
                         {movies.length > 0 ? (
                             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-8">
                                 {movies.map((movie, index) => (
-                                    <Link key={index} href={`/movies/${formatMovieTitle(movie.slug)}`} className="group cursor-pointer transition-all duration-500">
+                                    <div
+                                        key={index}
+                                        onClick={() => handleLinkClick(movie.slug)}
+                                        className="group cursor-pointer transition-all duration-500"
+                                    >
                                         <div className="mx-auto sm:mr-0 lg:mx-auto bg-white">
                                             <img
                                                 src={movie.movie_poster_img}
@@ -84,7 +88,7 @@ const Search = () => {
                                                 </Button>
                                             </div>
                                         </div>
-                                    </Link>
+                                    </div>
                                 ))}
                             </div>
                         ) : (
