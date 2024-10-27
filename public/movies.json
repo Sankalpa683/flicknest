@@ -32,7 +32,7 @@
     "language": "Hindi",
     "duration": 205,
     "rating": 8.5,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1h2",
+    "embedUrl": "https://www.youtube.com/embed/d8WFC7cs5SU",
     "movie_description": "Sholay follows two criminals, Jai and Veeru, hired by a retired police officer to capture a ruthless bandit named Gabbar Singh. The film intertwines action, friendship, and romance as they navigate various challenges and forge deep bonds.",
     "meta_description": "Sholay, directed by Ramesh Sippy, is a landmark 1975 Bollywood film known for its powerful storytelling and unforgettable characters. Starring Amitabh Bachchan and Dharmendra, this action-adventure film is celebrated for its dramatic plot and memorable dialogues. Experience the thrill of Jai and Veeru's journey to bring justice to the village and the enduring impact of their friendship.",
     "genres": [
@@ -78,7 +78,7 @@
     "language": "Hindi",
     "duration": 140,
     "rating": 5.9,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1h6",
+    "embedUrl": "https://www.dailymotion.com/embed/video/x91jwik",
     "movie_description": "Ek Tha Tiger tells the story of a RAW agent who falls in love with a Pakistani spy while on a mission. Their love story unfolds against the backdrop of espionage and danger.",
     "meta_description": "Directed by Kabir Khan, Ek Tha Tiger is a thrilling 2012 film starring Salman Khan and Katrina Kaif. This action-romance showcases the challenges of love across borders, packed with high-octane sequences and emotional depth. Experience the tension and passion as the protagonists navigate their respective duties and the unpredictability of their love.",
     "genres": [
@@ -100,7 +100,7 @@
     "language": "Hindi",
     "duration": 224,
     "rating": 8.1,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1h8",
+    "embedUrl": "https://www.youtube.com/embed/gbX-3eZRzsI",
     "movie_description": "Lagaan is set in the late 19th century and follows villagers who challenge British officers to a cricket match to avoid paying taxes. The film captures their struggles for justice and freedom.",
     "meta_description": "Lagaan, directed by Ashutosh Gowariker, is an iconic 2001 film that features Aamir Khan and Gracy Singh. This historical drama combines sports and social themes, showcasing India's fight against colonial oppression through the medium of cricket. Experience the inspiring tale of courage, unity, and determination as the villagers take on the British in an unforgettable match.",
     "genres": [
@@ -116,24 +116,25 @@
   },
   {
     "id": 6,
-    "slug": "chak-de-india",
-    "title": "Chak De! India",
-    "year": 2007,
+    "slug": "tiger-zinda-hai",
+    "title": "Tiger Zinda Hai",
+    "year": 2017,
     "language": "Hindi",
-    "duration": 153,
-    "rating": 8.2,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1ha",
-    "movie_description": "Chak De! India follows a disgraced hockey player who becomes the coach of the Indian women's hockey team, overcoming prejudices to lead them to victory.",
-    "meta_description": "Chak De! India, directed by Shimit Amin, is a stirring 2007 sports drama starring Shah Rukh Khan. This film highlights the journey of resilience and teamwork as the underdog women's hockey team strives for glory. Experience the passion and determination that drives them to break barriers and challenge stereotypes in the pursuit of success.",
+    "duration": 161,
+    "rating": 6.0,
+    "embedUrl": "https://www.dailymotion.com/embed/video/x97oi7e",
+    "movie_description": "Tiger Zinda Hai follows the story of two agents, Tiger and Zoya, as they join forces to rescue hostages in Iraq, navigating a dangerous mission full of action and suspense.",
+    "meta_description": "Tiger Zinda Hai, directed by Ali Abbas Zafar, is a thrilling 2017 action-packed drama starring Salman Khan and Katrina Kaif. This high-stakes tale of espionage and survival showcases the relentless courage and chemistry of two agents facing overwhelming odds to complete their mission. Join the pulse-pounding journey that celebrates heroism and loyalty.",
     "genres": [
-      "Drama",
-      "Sport"
+      "Action",
+      "Thriller"
     ],
     "actors": [
-      "Shah Rukh Khan"
+      "Salman Khan",
+      "Katrina Kaif"
     ],
-    "director": "Shimit Amin",
-    "movie_poster_img": "https://m.media-amazon.com/images/M/MV5BMTM2MjgyNDE5Nl5BMl5BanBnXkFtZTcwMzM1MDc4MQ@@._V1_.jpg"
+    "director": "Ali Abbas Zafar",
+    "movie_poster_img": "https://i.ytimg.com/vi/cOqHGyL53zM/maxresdefault.jpg"
   },
   {
     "id": 7,
@@ -167,7 +168,7 @@
     "language": "Hindi",
     "duration": 130,
     "rating": 7.4,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1hm",
+    "embedUrl": "https://www.cinemakick.com/player1/paa-2009/",
     "movie_description": "Paa is a heartwarming tale about a young boy who suffers from a rare genetic disorder, showcasing the deep bond between him and his father. The film explores themes of love, family, and acceptance.",
     "meta_description": "Paa, directed by R. Balki, stars Amitabh Bachchan in a poignant role as a father navigating the challenges of raising his son with a rare illness. This touching drama explores the complexities of parenthood and unconditional love, promising to resonate with audiences through its heartfelt storytelling and powerful performances.",
     "description": "Romance",
@@ -213,7 +214,7 @@
     "language": "Tamil",
     "duration": 147,
     "rating": 8.4,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1hr",
+    "embedUrl": "https://www.youtube.com/embed/qFO0f9tkg3c",
     "movie_description": "Ratsasan follows a determined cop as he delves into the mind of a psychopathic killer, unraveling a series of chilling murders while facing his own demons along the way.",
     "meta_description": "Ratsasan, directed by Ram Kumar, is a thrilling psychological drama that combines suspense and horror as it follows an investigator's quest to catch a serial killer. With its gripping plot and unexpected twists, this film promises to keep audiences on the edge of their seats, showcasing a masterful blend of storytelling and direction.",
     "description": "Drama",
