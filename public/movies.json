@@ -185,26 +185,26 @@
   },
   {
     "id": 9,
-    "slug": "tumbbad",
-    "title": "Tumbbad",
-    "year": 2018,
-    "language": "Hindi",
-    "duration": 104,
-    "rating": 8.3,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1hp",
-    "movie_description": "Tumbbad is a gripping drama that delves into the harsh realities faced by individuals in the shadow of societal issues, weaving a narrative of resilience and determination.",
-    "meta_description": "Tumbbad, directed by Rahi Anil Barve, is a thought-provoking film that highlights the struggles of the marginalized in society. Through its intense performances and realistic portrayal of life’s challenges, Tumbbad aims to shed light on important social issues, making it a must-watch for those seeking impactful cinema.",
-    "description": "Comedy & Drama",
+    "slug": "bhoothakaalam",
+    "title": "Bhoothakaalam",
+    "year": 2022,
+    "language": "Malayalam",
+    "duration": 105,
+    "rating": 7.8,
+    "embedUrl": "https://www.dailymotion.com/embed/video/x93j7s8",
+    "movie_description": "Bhoothakaalam is a psychological horror that follows a mother and her son, who experience unsettling events in their home, blurring the lines between reality and the supernatural.",
+    "meta_description": "Bhoothakaalam, directed by Rahul Sadasivan, is a chilling 2022 Malayalam psychological horror starring Revathy and Shane Nigam. This atmospheric film delves into themes of mental health and trauma, crafting a haunting experience as the characters confront the eerie and inexplicable. Experience this spine-tingling tale where fear and reality collide.",
     "genres": [
       "Horror",
-      "Drama"
+      "Thriller",
+      "Mystery"
     ],
     "actors": [
-      "Sohum Shah",
-      "Jyoti Subhash"
+      "Revathy",
+      "Shane Nigam"
     ],
-    "director": "Rahi Anil Barve",
-    "movie_poster_img": "https://image.tmdb.org/t/p/original/z1xOCxw780WFJC5uCTMfCkQ4Agi.jpg"
+    "director": "Rahul Sadasivan",
+    "movie_poster_img": "https://m.media-amazon.com/images/M/MV5BZjA0YWY5MzQtMDg0YS00MzA4LWJmOTUtYzg5MjY4YjU0YTM3XkEyXkFqcGdeQXVyOTk3NTc1OTE@._V1_.jpg"
   },
   {
     "id": 10,
@@ -237,7 +237,7 @@
     "language": "Hindi",
     "duration": 210,
     "rating": 8.2,
-    "embedUrl": "https://www.dailymotion.com/embed/video/x7tl1hu",
+    "embedUrl": "https://www.bilibili.tv/en/video/4787762731686400",
     "movie_description": "Swades tells the inspiring story of an Indian expatriate who returns to his homeland to bring about social change and development, highlighting themes of patriotism and empowerment.",
     "meta_description": "Swades, directed by Ashutosh Gowariker, features Shah Rukh Khan in a compelling role as a NASA scientist who rediscovers his roots in India. This heartfelt drama emphasizes the importance of community and social responsibility, captivating audiences with its emotional depth and powerful message.",
     "description": "Historical Drama",
