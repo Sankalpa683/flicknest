@@ -65,6 +65,26 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const relatedMovies = [
+    {
+      name: "Kuch Kuch Hota Hai",
+      image: "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg"
+    },
+    {
+      name: "Main Hoon Na",
+      image: "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg"
+    },
+    {
+      name: "Bhagwan",
+      image: "https://i.ytimg.com/vi/M6mcuySVazA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1xE9F-M8DWRmmCn4hHrTLYFRAlw"
+    },
+    {
+      name: "Kal Ho Na Ho",
+      image: "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6"
+    }
+  ];
+
+
 export default async function MoviePage({ params }) {
   const { slug } = params;
   const movie = await fetchMovieData(slug);
@@ -124,7 +144,6 @@ export default async function MoviePage({ params }) {
       thumbnailUrl: movie.movie_poster_img,
       uploadDate: movie.year,
       duration: `PT${movie.duration}M`,
-      contentUrl: movie.embedUrl,
       embedUrl: movie.embedUrl,
       interactionStatistic: {
         "@type": "InteractionCounter",
