@@ -28,20 +28,16 @@ export async function generateMetadata({ params }) {
     movie.title,
     movie.year,
     movie.language,
-    ...movie.genres,
+    ...new Set(movie.genres), // Removing duplicate genres
     "watch online",
     "full movie",
     "free streaming",
     "HD Bollywood movies",
     "Bollywood movie streaming",
-    "watch Bollywood movies online for free",
+    `watch Bollywood movies online for free`,
     `${movie.title} full movie`,
     `watch ${movie.title} online`,
-    `free ${movie.title} streaming`,
-    movie.year,
-    movie.language,
-    ...movie.genres,
-    "watch Bollywood movies online for free",
+    `free ${movie.title} streaming`
   ].join(", ");
 
   return {
@@ -65,53 +61,7 @@ export async function generateMetadata({ params }) {
       title: `Watch ${movie.title}`,
       description: movie.meta_description,
       images: [movie.movie_poster_img],
-    },
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "Movie",
-      name: movie.title,
-      description: movie.meta_description,
-      image: movie.movie_poster_img,
-      director: {
-        "@type": "Person",
-        name: movie.director,
-      },
-      actor: movie.actors.map((actor) => ({
-        "@type": "Person",
-        name: actor,
-      })),
-      genre: movie.genres,
-      dateCreated: movie.year,
-      duration: `PT${movie.duration}M`,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: movie.rating,
-        reviewCount: 60, // Placeholder; update with actual review count
-      },
-      video: {
-        "@type": "VideoObject",
-        name: movie.title,
-        description: movie.meta_description,
-        thumbnailUrl: movie.movie_poster_img,
-        uploadDate: movie.year, // You can adjust this
-        duration: `PT${movie.duration}M`,
-        contentUrl: movie.embedUrl,
-        embedUrl: movie.embedUrl,
-        interactionStatistic: {
-          "@type": "InteractionCounter",
-          interactionType: { "@type": "WatchAction" },
-          userInteractionCount: 1000, // Placeholder for views
-        },
-      },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.bollycinemahub.in/" },
-          { "@type": "ListItem", position: 2, name: "Movies", item: "https://www.bollycinemahub.in/movies" },
-          { "@type": "ListItem", position: 3, name: movie.title, item: `https://www.bollycinemahub.in/movies/${movie.slug}` },
-        ],
-      },
-    },
+    }
   };
 }
 
@@ -141,16 +91,56 @@ export default async function MoviePage({ params }) {
         </div>
         <Footer />
       </>
-    )
+    );
   }
 
-  // Related movies for recommendations
-  const relatedMovies = [
-    { name: "Kuch Kuch Hota Hai", image: "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg" },
-    { name: "Main Hoon Na", image: "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg" },
-    { name: "Bhagwan", image: "https://i.ytimg.com/vi/M6mcuySVazA/hq720.jpg" },
-    { name: "Kal Ho Na Ho", image: "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6" },
-  ];
+  // JSON-LD structured data
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    name: movie.title,
+    description: movie.meta_description,
+    image: movie.movie_poster_img,
+    director: {
+      "@type": "Person",
+      name: movie.director,
+    },
+    actor: movie.actors.map((actor) => ({
+      "@type": "Person",
+      name: actor,
+    })),
+    genre: movie.genres,
+    dateCreated: movie.year,
+    duration: `PT${movie.duration}M`,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: movie.rating,
+      reviewCount: 60,
+    },
+    video: {
+      "@type": "VideoObject",
+      name: movie.title,
+      description: movie.meta_description,
+      thumbnailUrl: movie.movie_poster_img,
+      uploadDate: movie.year,
+      duration: `PT${movie.duration}M`,
+      contentUrl: movie.embedUrl,
+      embedUrl: movie.embedUrl,
+      interactionStatistic: {
+        "@type": "InteractionCounter",
+        interactionType: { "@type": "WatchAction" },
+        userInteractionCount: 1000,
+      },
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.bollycinemahub.in/" },
+        { "@type": "ListItem", position: 2, name: "Movies", item: "https://www.bollycinemahub.in/movies" },
+        { "@type": "ListItem", position: 3, name: movie.title, item: `https://www.bollycinemahub.in/movies/${movie.slug}` },
+      ],
+    },
+  };
 
   return (
     <>
@@ -231,6 +221,11 @@ export default async function MoviePage({ params }) {
         </div>
       </div>
       <Footer />
+      {/* JSON-LD structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 }
