@@ -25,6 +25,11 @@ export const metadata = {
   title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
   description,
   keywords: [
+    'Bolly Cinema Hub',
+    'BollyCinema Hub',
+    'Bolly CinemaHub',
+    'BollyCinemaHub',
+    'bollycinemahub.in',
     'watch Bollywood movies online for free',
     'best site to watch Bollywood movies for free',
     'stream free Bollywood movies in HD',
@@ -92,7 +97,7 @@ export default function RootLayout({ children }) {
           additionalMetaTags={[
             {
               name: 'keywords',
-              content: 'watch Bollywood movies online for free, best site to watch Bollywood movies for free, stream free Bollywood movies in HD, Bollywood movie streaming site, latest Bollywood blockbusters online, free online movie streaming without registration, watch free Hindi movies online',
+              content: 'Bolly Cinema Hub, BollyCinema Hub, Bolly CinemaHub, BollyCinemaHub, bollycinemahub.in, watch Bollywood movies online for free, best site to watch Bollywood movies for free, stream free Bollywood movies in HD, Bollywood movie streaming site, latest Bollywood blockbusters online, free online movie streaming without registration, watch free Hindi movies online',
             },
             {
               name: 'robots',
@@ -115,6 +120,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: siteName,
+              alternateName: ['Bolly Cinema Hub', 'BollyCinema Hub', 'Bolly CinemaHub', 'BollyCinemaHub'],
               url: siteURL,
               logo: `${siteURL}/logo.png`,
               sameAs: [
@@ -138,6 +144,8 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
+              name: "Bolly Cinema Hub | BollyCinema Hub",
+              alternateName: ["Bolly CinemaHub", "BollyCinemaHub"],
               url: siteURL,
               potentialAction: {
                 '@type': 'SearchAction',
@@ -175,6 +183,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
               name: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+              alternateName: "Bolly Cinema Hub | BollyCinema Hub",
               description: description,
               url: siteURL,
             }),
