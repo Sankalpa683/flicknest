@@ -1,5 +1,8 @@
 import React from 'react'
 import Navbar from '../components/navbar'
+import { Button } from 'antd';
+import Link from 'next/link'
+import { HomeOutlined } from '@ant-design/icons';
 import Footer from '../components/footer'
 
 const page = () => {
