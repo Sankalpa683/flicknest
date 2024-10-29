@@ -22,7 +22,7 @@ const siteURL = siteConfig.url;
 const description = siteConfig.description;
 
 export const metadata = {
-  title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+  title: `BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`,
   description,
   keywords: [
     'Bolly Cinema Hub',
@@ -46,22 +46,22 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: siteURL,
-    title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+    title: `BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`,
     description,
     images: [
       {
         url: `${siteURL}/images/og-image.jpg`,
         width: 800,
         height: 600,
-        alt: `${siteName} - Watch Bollywood Movies Online for Free`,
+        alt: `BollyCinema Hub - Watch Bollywood Movies Online for Free`,
       },
     ],
     siteName: siteName,
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@bollycinemahub',
-    title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+    site: siteConfig.twitterHandle,
+    title: `BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`,
     description,
     images: [`${siteURL}/images/og-image.jpg`],
   },
@@ -72,26 +72,26 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <NextSeo
-          title={`${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`}
+          title={`BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`}
           description={description}
           canonical={siteURL}
           openGraph={{
             url: siteURL,
-            title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
+            title: `BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`,
             description,
             images: [
               {
                 url: `${siteURL}/images/og-image.jpg`,
                 width: 800,
                 height: 600,
-                alt: `${siteName} - Watch Bollywood Movies Online for Free`,
+                alt: `BollyCinema Hub - Watch Bollywood Movies Online for Free`,
               },
             ],
             site_name: siteName,
           }}
           twitter={{
-            handle: '@bollycinemahub',
-            site: '@bollycinemahub',
+            handle: siteConfig.twitterHandle,
+            site: siteConfig.twitterHandle,
             cardType: 'summary_large_image',
           }}
           additionalMetaTags={[
@@ -120,7 +120,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: siteName,
-              alternateName: ['Bolly Cinema Hub', 'BollyCinema Hub', 'Bolly CinemaHub', 'BollyCinemaHub'],
+              alternateName: ['Bolly Cinema Hub', 'BollyCinema Hub', 'Bolly CinemaHub', 'BollyCinemaHub', 'bollycinemahub.in'],
               url: siteURL,
               logo: `${siteURL}/logo.png`,
               sameAs: [
@@ -130,7 +130,7 @@ export default function RootLayout({ children }) {
               ],
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+1-800-555-5555',
+                telephone: siteConfig.supportPhoneNumber,
                 contactType: 'Customer Support',
               },
             }),
@@ -145,7 +145,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: "Bolly Cinema Hub | BollyCinema Hub",
-              alternateName: ["Bolly CinemaHub", "BollyCinemaHub"],
+              alternateName: ["Bolly CinemaHub", "BollyCinemaHub", "bollycinemahub.in"],
               url: siteURL,
               potentialAction: {
                 '@type': 'SearchAction',
@@ -183,7 +183,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
               name: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
-              alternateName: "Bolly Cinema Hub | BollyCinema Hub",
+              alternateName: ["Bolly Cinema Hub | BollyCinema Hub", "bollycinemahub.in"],
               description: description,
               url: siteURL,
             }),
