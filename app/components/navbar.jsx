@@ -27,11 +27,11 @@ const Navbar = ({ active }) => {
     const links = (
         <Menu>
             <Menu.Item key="1" disabled>
-                My Account
+                Welcome
             </Menu.Item>
             <Menu.Divider />
-            <Menu.Item key="2" icon={<BookOutlined />}>
-                Bookmarks
+            <Menu.Item key="2">
+                Welcome to BollyCinemaHub
             </Menu.Item>
         </Menu>
     );
@@ -115,9 +115,9 @@ const Navbar = ({ active }) => {
                         <AppstoreOutlined className="text-xl" />
                         <span className="text-xs">Movies</span>
                     </Link>
-                    <Link href="/bookmarks" className="flex flex-col items-center text-center">
+                    <Link href="" className="flex flex-col items-center text-center">
                         <BookOutlined className="text-xl" />
-                        <span className="text-xs">Bookmarks</span>
+                        <span className="text-xs">FAQs</span>
                     </Link>
                 </nav>
             </div>

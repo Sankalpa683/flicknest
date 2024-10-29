@@ -51,14 +51,6 @@ const footer = () => {
                     Web series
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href="/bookmarks"
-                    className="text-gray-400 text-sm font-normal hover:text-black"
-                  >
-                    Bookmarks
-                  </Link>
-                </li>
               </ul>
             </div>
             <div className="lg:mx-auto text-center lg:text-left">

@@ -197,11 +197,6 @@ export default async function MoviePage({ params }) {
                 ))}
               </div>
             </div>
-            <div className="flex bg-white space-x-2">
-              <Button type="primary" icon={<LikeOutlined />}>Like</Button>
-              <Button icon={<ShareAltOutlined />}>Share</Button>
-              <Button icon={<BookOutlined />}>Bookmark</Button>
-            </div>
           </div>
           <div className="space-y-6 bg-white">
             <Card title="Cast">
