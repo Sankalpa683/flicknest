@@ -27,11 +27,11 @@ const Navbar = ({ active }) => {
     const links = (
         <Menu>
             <Menu.Item key="1" disabled>
-                Welcome
+                Welcome to
             </Menu.Item>
             <Menu.Divider />
             <Menu.Item key="2">
-                Welcome to BollyCinemaHub
+                BollyCinemaHub
             </Menu.Item>
         </Menu>
     );
