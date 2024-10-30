@@ -250,5 +250,31 @@
     ],
     "director": "Ashutosh Gowariker",
     "movie_poster_img": "https://m.media-amazon.com/images/M/MV5BZWJlNmQ2NmQtM2U3Yi00MTZjLWI1YzktY2I2MmExMzgwNmE3XkEyXkFqcGc@._V1_.jpg"
-  }
+  },
+  {
+  "id": 12,
+  "slug": "krrish",
+  "title": "Krrish",
+  "year": 2006,
+  "language": "Hindi",
+  "duration": 175,
+  "rating": 6.2,
+  "embedUrl": "https://www.youtube.com/embed/ZYIo8fAzIi8",
+  "movie_description": "Krrish is the story of Krishna, a young man with superhuman abilities, who discovers his destiny as a superhero. Following the death of his parents, Krishna is raised by his grandmother in a secluded village. He inherits extraordinary powers from his father, Rohit Mehra, a scientist who had also displayed superhuman abilities. While visiting Singapore, Krishna encounters various challenges and eventually takes on the alter-ego of Krrish to save the city and its people from a dangerous adversary, Dr. Siddhant Arya, who plans to misuse Rohit's invention for his evil ambitions.",
+  "meta_description": "Krrish, directed by Rakesh Roshan and starring Hrithik Roshan, is a groundbreaking Bollywood superhero film. Released in 2006, it follows Krishna, who becomes the superhero Krrish to combat evil forces threatening humanity. Combining elements of action, romance, and science fiction, Krrish redefined the genre in Indian cinema. With spectacular visual effects and Hrithik Roshan's dynamic performance, the film showcases the journey of an ordinary man with extraordinary powers, as he discovers his true potential and responsibility as a hero.",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Sci-Fi"
+  ],
+  "actors": [
+    "Hrithik Roshan",
+    "Priyanka Chopra",
+    "Rekha",
+    "Naseeruddin Shah"
+  ],
+  "director": "Rakesh Roshan",
+  "movie_poster_img": "https://wallpapercave.com/wp/wp8238727.jpg"
+}
+
 ]
