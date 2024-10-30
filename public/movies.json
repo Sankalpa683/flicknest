@@ -275,6 +275,55 @@
   ],
   "director": "Rakesh Roshan",
   "movie_poster_img": "https://wallpapercave.com/wp/wp8238727.jpg"
+},
+  {
+  "id": 13,
+  "slug": "koi-mil-gaya",
+  "title": "Koi Mil Gaya",
+  "year": 2003,
+  "language": "Hindi",
+  "duration": 171,
+  "rating": 7.1,
+  "embedUrl": "https://www.youtube.com/embed/rgywJmKFjrg",
+  "movie_description": "Koi Mil Gaya tells the story of Rohit, a developmentally disabled young man who, along with his friend Nisha, contacts an alien using a device invented by his late scientist father. The alien, Jadoo, grants Rohit incredible abilities, allowing him to overcome his disabilities and gain superhuman strength and intelligence. As Rohit adjusts to his new life and faces various challenges, he must ultimately protect Jadoo from those who wish to exploit the alien for their own gain.",
+  "meta_description": "Koi Mil Gaya, directed by Rakesh Roshan, is a heartwarming sci-fi drama that introduced Bollywood's first friendly alien, Jadoo. Starring Hrithik Roshan and Preity Zinta, the 2003 film follows the journey of Rohit, a young man with developmental disabilities who gains extraordinary powers through his friendship with Jadoo. Blending elements of science fiction and human emotion, the film explores themes of friendship, acceptance, and transformation, making it a landmark in Indian cinema.",
+  "genres": [
+    "Sci-Fi",
+    "Drama",
+    "Family"
+  ],
+  "actors": [
+    "Hrithik Roshan",
+    "Preity Zinta",
+    "Rekha",
+    "Prem Chopra"
+  ],
+  "director": "Rakesh Roshan",
+  "movie_poster_img": "https://i.pinimg.com/474x/72/74/eb/7274ebff67a16e476effc727f708505c.jpg"
+},
+{
+  "id": 14,
+  "slug": "krrish-3",
+  "title": "Krrish 3",
+  "year": 2013,
+  "language": "Hindi",
+  "duration": 152,
+  "rating": 5.3,
+  "embedUrl": "https://www.youtube.com/embed/BzeS2uaSj2k",
+  "movie_description": "In Krrish 3, Krishna continues his journey as the superhero Krrish, now married to Priya and living with his scientist father, Rohit. When an evil mastermind named Kaal, a mutant with telekinetic powers, creates a virus to destroy humanity, Krrish must rise to stop him. With the help of his father and new allies, Krrish faces off against Kaal and his army of mutants in a battle that will determine the fate of mankind.",
+  "meta_description": "Krrish 3, directed by Rakesh Roshan, sees Hrithik Roshan reprising his role as the superhero Krrish. Released in 2013, the film combines high-stakes action with sci-fi, as Krrish battles the powerful antagonist Kaal, played by Vivek Oberoi. With special effects and engaging action sequences, Krrish 3 explores themes of heroism, family bonds, and the fight between good and evil, marking another exciting chapter in Bollywood's iconic superhero series.",
+  "genres": [
+    "Action",
+    "Sci-Fi",
+    "Adventure"
+  ],
+  "actors": [
+    "Hrithik Roshan",
+    "Priyanka Chopra",
+    "Kangna Ranaut",
+    "Vivek Oberoi"
+  ],
+  "director": "Rakesh Roshan",
+  "movie_poster_img": "https://m.media-amazon.com/images/I/71bRsaYXQaL._AC_UF894,1000_QL80_.jpg"
 }
-
 ]
