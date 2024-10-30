@@ -324,7 +324,7 @@
     "Vivek Oberoi"
   ],
   "director": "Rakesh Roshan",
-  "movie_poster_img": "https://pics.filmaffinity.com/krrish_3-975443417-large.jpg"
+  "movie_poster_img": "https://stat4.bollywoodhungama.in/wp-content/uploads/2016/03/74218192.jpg"
 },
   {
   "id": 15,
@@ -359,7 +359,7 @@
   "language": "Hindi",
   "duration": 181,
   "rating": 7.4,
-  "embedUrl": "https://www.youtube.com/embed/M6mcuySVazA",
+  "embedUrl": "https://www.youtube.com/embed/j8lkuv5pnkU",
   "movie_description": "Baghban is a moving story of an elderly couple, Raj and Pooja, who devoted their lives to raising their four sons. After retirement, they find themselves abandoned and mistreated by their children. Despite their hardships, the couple finds new ways to stand strong together, uncovering the true meaning of love and family.",
   "meta_description": "Baghban, directed by Ravi Chopra, stars Amitabh Bachchan and Hema Malini in a heartwarming tale of parental love and sacrifice. This 2003 drama explores themes of family values, aging, and resilience, depicting the emotional journey of a couple as they face unexpected betrayal from their own children.",
   "genres": [
@@ -400,5 +400,30 @@
   ],
   "director": "Nikhil Advani",
   "movie_poster_img": "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6"
+},
+  {
+  "id": 8,
+  "slug": "main-hoon-na",
+  "title": "Main Hoon Na",
+  "year": 2004,
+  "language": "Hindi",
+  "duration": 179,
+  "rating": 7.0,
+  "embedUrl": "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg",
+  "movie_description": "Main Hoon Na follows Major Ram, an Indian army officer, who goes undercover as a college student to protect General Bakshi's daughter from terrorist threats. Along the way, Ram finds himself navigating campus life, dealing with family secrets, and protecting his country. The film is a blend of action, comedy, and romance.",
+  "meta_description": "Main Hoon Na, directed by Farah Khan and starring Shah Rukh Khan, Sushmita Sen, and Amrita Rao, is an action-comedy with heart. This 2004 film tells the story of a soldier who goes undercover in college to protect a general's daughter, encountering unexpected family connections and enemies. A true Bollywood classic with laughs, love, and action.",
+  "genres": [
+    "Action",
+    "Comedy",
+    "Drama"
+  ],
+  "actors": [
+    "Shah Rukh Khan",
+    "Sushmita Sen",
+    "Amrita Rao",
+    "Zayed Khan"
+  ],
+  "director": "Farah Khan",
+  "movie_poster_img": "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg"
 }
 ]
