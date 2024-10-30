@@ -325,5 +325,80 @@
   ],
   "director": "Rakesh Roshan",
   "movie_poster_img": "https://pics.filmaffinity.com/krrish_3-975443417-large.jpg"
+},
+  {
+  "id": 15,
+  "slug": "kuch-kuch-hota-hai",
+  "title": "Kuch Kuch Hota Hai",
+  "year": 1998,
+  "language": "Hindi",
+  "duration": 177,
+  "rating": 7.6,
+  "embedUrl": "https://www.youtube.com/embed/TR_apkmuVYE",
+  "movie_description": "Kuch Kuch Hota Hai revolves around Rahul and Anjali, college best friends whose friendship is tested when Rahul falls in love with another woman, Tina. Years later, after Tina's passing, her daughter sets out to reunite Rahul and Anjali. The story explores the themes of friendship, love, and the complexities of relationships.",
+  "meta_description": "Kuch Kuch Hota Hai, directed by Karan Johar and starring Shah Rukh Khan, Kajol, and Rani Mukerji, is a beloved Bollywood romantic drama. Released in 1998, it tells a tale of friendship, love, and destiny, with unforgettable performances and iconic music. Experience the emotional journey that defined an era of Bollywood romance.",
+  "genres": [
+    "Romance",
+    "Drama",
+    "Family"
+  ],
+  "actors": [
+    "Shah Rukh Khan",
+    "Kajol",
+    "Rani Mukerji",
+    "Salman Khan"
+  ],
+  "director": "Karan Johar",
+  "movie_poster_img": "https://m.media-amazon.com/images/I/81Z29KU-VSL.jpg"
+},
+  {
+  "id": 16,
+  "slug": "baghban",
+  "title": "Baghban",
+  "year": 2003,
+  "language": "Hindi",
+  "duration": 181,
+  "rating": 7.4,
+  "embedUrl": "https://www.youtube.com/embed/M6mcuySVazA",
+  "movie_description": "Baghban is a moving story of an elderly couple, Raj and Pooja, who devoted their lives to raising their four sons. After retirement, they find themselves abandoned and mistreated by their children. Despite their hardships, the couple finds new ways to stand strong together, uncovering the true meaning of love and family.",
+  "meta_description": "Baghban, directed by Ravi Chopra, stars Amitabh Bachchan and Hema Malini in a heartwarming tale of parental love and sacrifice. This 2003 drama explores themes of family values, aging, and resilience, depicting the emotional journey of a couple as they face unexpected betrayal from their own children.",
+  "genres": [
+    "Drama",
+    "Family",
+    "Romance"
+  ],
+  "actors": [
+    "Amitabh Bachchan",
+    "Hema Malini",
+    "Salman Khan",
+    "Mahima Chaudhry"
+  ],
+  "director": "Ravi Chopra",
+  "movie_poster_img": "https://i.ytimg.com/vi/M6mcuySVazA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC1xE9F-M8DWRmmCn4hHrTLYFRAlw"
+},
+  {
+  "id": 17,
+  "slug": "kal-ho-naa-ho",
+  "title": "Kal Ho Naa Ho",
+  "year": 2003,
+  "language": "Hindi",
+  "duration": 186,
+  "rating": 7.9,
+  "embedUrl": "https://www.youtube.com/embed/y1JGZi_x0CU",
+  "movie_description": "Kal Ho Naa Ho centers on Naina, a pessimistic young woman in New York, whose life changes when she meets Aman, a cheerful man who hides his own struggles. As Naina finds herself falling in love with Aman, she discovers that he has a tragic secret. A story of love, friendship, and sacrifice, Kal Ho Naa Ho explores the beauty and fragility of life.",
+  "meta_description": "Kal Ho Naa Ho, directed by Nikhil Advani and featuring Shah Rukh Khan, Preity Zinta, and Saif Ali Khan, is a beloved Bollywood romantic drama. Released in 2003, the film captures a tale of love and loss, reminding audiences to cherish every moment. A timeless classic with unforgettable performances and heartwarming themes.",
+  "genres": [
+    "Romance",
+    "Drama",
+    "Comedy"
+  ],
+  "actors": [
+    "Shah Rukh Khan",
+    "Preity Zinta",
+    "Saif Ali Khan",
+    "Jaya Bachchan"
+  ],
+  "director": "Nikhil Advani",
+  "movie_poster_img": "https://preview.redd.it/20-years-of-kal-ho-naa-ho-v0-pginhtp9qg2c1.jpeg?auto=webp&s=2c7aa9426c1e739121c1596c4fe448facf8801d6"
 }
 ]
