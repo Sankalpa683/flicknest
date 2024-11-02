@@ -2,6 +2,7 @@ import { Button, Card, Badge } from "antd";
 import { LikeOutlined, BookOutlined, ShareAltOutlined, StarFilled, HomeOutlined } from "@ant-design/icons";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
+import Script from 'next/script';
 import axios from 'axios';
 import Link from "next/link";
 
@@ -236,8 +237,9 @@ export default async function MoviePage({ params }) {
       </div>
       <Footer />
       {/* JSON-LD structured data */}
-      <script
+      <Script
         type="application/ld+json"
+        id="json-ld"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </>
