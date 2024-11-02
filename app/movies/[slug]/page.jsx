@@ -135,8 +135,9 @@ export default async function MoviePage({ params }) {
     duration: `PT${movie.duration}M`,
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: movie.rating,
-      reviewCount: 60,
+      ratingValue: 4.5,
+      bestRating: 5,
+      ratingCount: 250,
     },
     video: {
       "@type": "VideoObject",
