@@ -1,107 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://www.bollycinemahub.in/</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://www.bollycinemahub.in/</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/category/action</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/web-series</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/maharaja</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/category/action</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/paa</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/maharaja</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/tumbbad</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/paa</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/ratsasan</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/ratsasan</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/swadesh</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/swadesh</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/taare-zameen-par</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/category/romance</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/category/romance</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/sholay</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/sholay</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/dilwale-dulhania-le-jayenge</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/dilwale-dulhania-le-jayenge</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/3-idiots</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/3-idiots</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/ek-tha-tiger</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/ek-tha-tiger</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/lagaan</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/lagaan</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/chak-de-india</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/movies/chak-de-india</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/category/thriller</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/category/thriller</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/tumbbad</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/category/drama</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/movies/taare-zameen-par</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.bollycinemahub.in/category/horror</loc>
-  <lastmod>2024-10-26T14:40:58+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://www.bollycinemahub.in/category/drama</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://www.bollycinemahub.in/category/horror</loc>
+<lastmod>2024-11-06T13:56:37+00:00</lastmod>
+<priority>0.80</priority>
+</url>
 </urlset>
