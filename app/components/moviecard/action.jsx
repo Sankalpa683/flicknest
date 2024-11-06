@@ -23,13 +23,6 @@ const movies = [
         img: 'https://m.media-amazon.com/images/M/MV5BMDIzNWI1YTUtZmFjNy00ZjZhLTk1ZDItOTU3YjNhZWUxMjJhXkEyXkFqcGc@._V1_.jpg',
     },
     {
-        id: '03',
-        title: 'Tumbbad',
-        release_year: '2018',
-        description: 'Comedy & Drama',
-        img: 'https://image.tmdb.org/t/p/original/z1xOCxw780WFJC5uCTMfCkQ4Agi.jpg',
-    },
-    {
         id: '04',
         title: 'Ratsasan',
         release_year: '2018',
@@ -42,13 +35,6 @@ const movies = [
         release_year: '2004',
         description: 'Historical Drama',
         img: 'https://m.media-amazon.com/images/M/MV5BZWJlNmQ2NmQtM2U3Yi00MTZjLWI1YzktY2I2MmExMzgwNmE3XkEyXkFqcGc@._V1_.jpg',
-    },
-    {
-        id: '06',
-        title: 'Taare Zameen Par',
-        release_year: '2007',
-        description: 'Sports Drama',
-        img: 'https://upload.wikimedia.org/wikipedia/en/b/b4/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png',
     },
 ];
 
