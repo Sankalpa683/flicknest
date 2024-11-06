@@ -17,7 +17,7 @@ const { name: siteName, url: siteURL, description } = siteConfig;
 const seoConfig = {
   title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
   description,
-  canonical: siteURL,
+  canonical: 'https://www.bollycinemahub.in/',
   openGraph: {
     type: 'website',
     url: siteURL,
@@ -43,8 +43,8 @@ const seoConfig = {
     site_name: siteName,
   },
   twitter: {
-    handle: '@flicknest',
-    site: '@flicknest',
+    handle: '@bollycinemahub',
+    site: '@bollycinemahub',
     cardType: 'summary_large_image',
   },
   additionalMetaTags: [
@@ -66,9 +66,9 @@ const jsonLdSchemas = {
     logo: `${siteURL}/logo.png`,
     name: siteName,
     sameAs: [
-      'https://www.facebook.com/flicknest',
-      'https://www.instagram.com/flicknest',
-      'https://www.twitter.com/flicknest',
+      'https://www.facebook.com/bollycinemahub',
+      'https://www.instagram.com/bollycinemahub',
+      'https://www.twitter.com/bollycinemahub',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
