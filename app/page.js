@@ -17,7 +17,6 @@ const { name: siteName, url: siteURL, description } = siteConfig;
 const seoConfig = {
   title: `${siteName} | #1 Platform to Watch Bollywood Movies Online for Free`,
   description,
-  canonical: 'https://www.bollycinemahub.in/',
   openGraph: {
     type: 'website',
     url: siteURL,
