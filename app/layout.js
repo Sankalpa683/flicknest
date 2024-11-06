@@ -74,7 +74,6 @@ export default function RootLayout({ children }) {
         <NextSeo
           title={`BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`}
           description={description}
-          canonical={siteURL}
           openGraph={{
             url: siteURL,
             title: `BollyCinema Hub | Bolly Cinema Hub | #1 Platform to Watch Bollywood Movies Online for Free`,
