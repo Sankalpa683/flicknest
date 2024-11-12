@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="google-site-verification" content="KlSihWZhJzDiIksOwRjrzQMQGvvDoNTIsY8xkf_akFw" />
         
-            <meta name="google-adsense-account" content="ca-pub-5161648147278073">
+            <meta name="google-adsense-account" content="ca-pub-5161648147278073" />
       </Head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
