@@ -228,7 +228,7 @@ export default function TysonVsJakePage() {
                 <h1 className="text-3xl font-bold text-center">Watch Mike Tyson vs Jake Paul Full Fight 2024</h1>
                 <div className="flex justify-center mb-6">
                     <iframe
-                        src="https://www.youtube.com/embed/xeyxOmAONM4"
+                        src="https://www.youtube.com/embed/_88Mya6YiOg"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         className="w-full h-[500px] lg:w-3/4 rounded-lg"
