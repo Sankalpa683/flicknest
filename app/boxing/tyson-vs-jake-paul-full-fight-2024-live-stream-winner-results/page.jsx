@@ -227,14 +227,13 @@ export default function TysonVsJakePage() {
             <div className="container mx-auto p-4 space-y-8 bg-white">
                 <h1 className="text-3xl font-bold text-center">Watch Mike Tyson vs Jake Paul Full Fight 2024</h1>
                 <div className="flex justify-center mb-6">
-                    <video
-                        controls
+                    <iframe
+                        src="https://www.youtube.com/embed/_88Mya6YiOg"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
                         className="w-full h-[500px] lg:w-3/4 rounded-lg"
                         title="Watch Mike Tyson vs Jake Paul Full Fight 2024"
-                    >
-                        <source src="/tysonvspaul.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
+                    ></iframe>
 
                 </div>
 
