@@ -125,6 +125,7 @@ const Page = () => {
   return (
     <>
       <Head>
+    <script defer data-website-id="673f1ea2e283034ed24d5e23" data-domain="bollycinemahub.in" src="https://datafa.st/js/script.js"></script>
         <NextSeo {...seoConfig} jsonLd={jsonLdSchemas.organization} />
         {Object.values(jsonLdSchemas).map((schema, idx) => (
           <script
