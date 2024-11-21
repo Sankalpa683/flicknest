@@ -106,7 +106,9 @@ export default function RootLayout({ children }) {
         />
 
         <link rel="icon" href="/favicon.ico" />
+
             <script defer data-website-id="673f1ea2e283034ed24d5e23" data-domain="bollycinemahub.in" src="https://datafa.st/js/script.js"></script>
+            
         <meta name="google-site-verification" content="KlSihWZhJzDiIksOwRjrzQMQGvvDoNTIsY8xkf_akFw" />
         
             <meta name="google-adsense-account" content="ca-pub-5161648147278073" />
