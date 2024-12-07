@@ -425,5 +425,31 @@
   ],
   "director": "Farah Khan",
   "movie_poster_img": "https://i.ytimg.com/vi/Fzn15YxESCg/maxresdefault.jpg"
+},
+  {
+  "id": 19,
+  "slug": "lucky-bhaskar",
+  "title": "Lucky Bhaskar",
+  "year": 2024,
+  "language": "Hindi",
+  "duration": 155,
+  "rating": 8.2,
+  "embedUrl": "https://www.dailymotion.com/embed/video/x9aazdk",
+  "movie_description": "Lucky Bhaskar is an inspiring tale of a small-town gambler whose life takes a transformative turn after an unexpected encounter with a mysterious mentor. Struggling between the allure of quick wealth and his long-lost dreams, Bhaskar must choose between his past habits and a future full of possibilities. Packed with drama, emotion, and suspense, the film explores themes of redemption and the power of self-belief.",
+  "meta_description": "Lucky Bhaskar is a 2024 Bollywood drama that follows the journey of a gambler as he discovers a new purpose in life. Starring Vicky Kaushal, Kriti Sanon, and Naseeruddin Shah, this film combines thrilling storytelling with heartfelt moments, making it a must-watch for audiences.",
+  "genres": [
+    "Drama",
+    "Thriller",
+    "Inspirational"
+  ],
+  "actors": [
+    "Dulquer Salmaan",
+    "Meenakshi Chaudhary",
+    "Surya Srinivas",
+    "Ramki"
+  ],
+  "director": "Anurag Kashyap",
+  "movie_poster_img": "https://i.ytimg.com/vi/AS7GcG5jr8k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCfSw3l0uWwpqqE8XVpXq2tvPjX-Q"
 }
+
 ]
