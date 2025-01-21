@@ -125,7 +125,15 @@ const Page = () => {
   return (
     <>
       <Head>
-    <script defer data-website-id="673f1ea2e283034ed24d5e23" data-domain="bollycinemahub.in" src="https://datafa.st/js/script.js"></script>
+        {/* Analytics Script */}
+        <script
+          defer
+          data-website-id="673f1ea2e283034ed24d5e23"
+          data-domain="bollycinemahub.in"
+          src="https://datafa.st/js/script.js"
+        ></script>
+
+        {/* SEO Metadata */}
         <NextSeo {...seoConfig} jsonLd={jsonLdSchemas.organization} />
         {Object.values(jsonLdSchemas).map((schema, idx) => (
           <script
@@ -134,34 +142,37 @@ const Page = () => {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         ))}
+
+        {/* Inline Ads Options */}
         <script type="text/javascript">
-        	atOptions = {
-        		'key' : '08579cbc1c40e3c1c5f79cff4044ee10',
-        		'format' : 'iframe',
-        		'height' : 250,
-        		'width' : 300,
-        		'params' : {}
-        	};
+          {`
+            atOptions = {
+              'key': '08579cbc1c40e3c1c5f79cff4044ee10',
+              'format': 'iframe',
+              'height': 250,
+              'width': 300,
+              'params': {}
+            };
+          `}
         </script>
 
-           {/* static Ads script code */}
-          
-<script type="text/javascript" src="//www.highperformanceformat.com/08579cbc1c40e3c1c5f79cff4044ee10/invoke.js"></script>
+        {/* Static Ads Script */}
+        <script src="//www.highperformanceformat.com/08579cbc1c40e3c1c5f79cff4044ee10/invoke.js"></script>
+
+        {/* Popunder Ads Scripts */}
+        <script src="//pl25633493.profitablecpmrate.com/e7/58/68/e75868140948265dbc23c86c499522bd.js"></script>
+        <script
+          async
+          src="//pl25633560.profitablecpmrate.com/0f896becdcd32ed820663f590abcc2ce/invoke.js"
+        ></script>
+
         <link rel="icon" href="/favicon.ico" />
-
-          {/* popunder Ads script code */}
-
-<script type='text/javascript' src='//pl25633493.profitablecpmrate.com/e7/58/68/e75868140948265dbc23c86c499522bd.js'></script>
-
-  <script async="async" data-cfasync="false" src="//pl25633560.profitablecpmrate.com/0f896becdcd32ed820663f590abcc2ce/invoke.js"></script>
-        
-       
       </Head>
 
       <Navbar active="home" />
       <Hero />
       <main className="mb-10 bg-white">
-          <div id="container-0f896becdcd32ed820663f590abcc2ce"></div>
+        <div id="container-0f896becdcd32ed820663f590abcc2ce"></div>
         <Action />
         <Romance />
         <br />
