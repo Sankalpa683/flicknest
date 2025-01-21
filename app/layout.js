@@ -200,7 +200,8 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-
+        <script async="async" data-cfasync="false" src="//pl25633560.profitablecpmrate.com/0f896becdcd32ed820663f590abcc2ce/invoke.js"></script>
+        <div id="container-0f896becdcd32ed820663f590abcc2ce"></div>
         {children}
       </body>
     </html>
