@@ -144,6 +144,10 @@ export default function RootLayout({ children }) {
           }}
         />
 
+         {/* Ads script code */}
+
+<script type='text/javascript' src='//pl25633493.profitablecpmrate.com/e7/58/68/e75868140948265dbc23c86c499522bd.js'></script>
+
         {/* JSON-LD for SearchAction Schema */}
         <script
           type="application/ld+json"
