@@ -115,6 +115,7 @@ export default function RootLayout({ children }) {
 
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5161648147278073"
      crossorigin="anonymous"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="5da45f37-e66b-461f-8ce5-6094c2c483f3"></script>
 
         {/* Ads script code */}
 
